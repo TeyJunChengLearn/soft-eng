@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('medical_staffs', function (Blueprint $table) {
             $table->id();
+            $table->string("vet_id")->nullable();
             $table->boolean("status");
             $table->unsignedBigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");

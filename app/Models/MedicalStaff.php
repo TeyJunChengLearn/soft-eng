@@ -10,6 +10,7 @@ class MedicalStaff extends Model
 
     protected $fillable=[
         "status",
+        "vet_id",
         "user_id",
     ];
 
