@@ -12,13 +12,19 @@
     <div class="login-page">
         <div class="login-center-container">
             <img src="assets/cat database logo.jpg" class="login-image">
-            <form class="login-form-container">
-                <a class="error-return">error error</a>
-                <input class="login-form-email-input" placeholder="Email" type="email"/>
-                <input class="login-form-password-input" placeholder="Password" type="password">
+            <form class="login-form-container" method="POST" action="{{route("login.post")}}">
+                @csrf
+                @if($errors->Any())
+                    @foreach($errors->all() as $error)
+                        <p class="error-return">{{$error}}</p>
+                    @endforeach
+                @endif
+
+                <input class="login-form-email-input" placeholder="Email" type="email" name="email"/>
+                <input class="login-form-password-input" placeholder="Password" type="password" name="password">
                 <a href="#" class="login-form-forgotpassword-link">Forgot Password?</a>
                 <input class="login-form-submit-input" type="submit" value="Log In"/>
-                <a href="#" class="login-create-account-link">Create a new account</a>   
+                <a href="{{route("register.index")}}" class="login-create-account-link">Create a new account</a>
             </form>
         </div>
     </div>

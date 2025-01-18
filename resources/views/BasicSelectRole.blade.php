@@ -20,21 +20,21 @@
                 </p>
             </div>
             <div class="selectrole-below-container">
-                <a href="#">
+                <a href="{{route('selectRole.medicalStaff')}}">
                     <div class="selectrole-below-left-text-container">
                         <p class="selectrole-text">
                             Medical Staff
                         </p>
                     </div >
                 </a>
-                <a href="#">
+                <a href="{{route("selectRole.manager")}}">
                     <div class="selectrole-below-center-text-container">
                         <p class="selectrole-text">
                             Manager
                         </p>
                     </div>
                 </a>
-                <a href="#">
+                <a href="{{route("selectRole.caretaker")}}">
                     <div class="selectrole-below-right-text-container">
                         <p class="selectrole-text">
                             Caretaker
@@ -42,7 +42,7 @@
                     </div>
                 </a>
             </div>
-            
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

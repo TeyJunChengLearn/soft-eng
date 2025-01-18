@@ -11,14 +11,19 @@
 <body>
     <div class="createaccount-page">
             <img src="assets/cat database logo.jpg" class="createaccount-image"/>
-            <form class="createaccount-form-layout">
-                <a class="error-return">error error</a>
-                <input type="text" placeholder="Username" class="createaccount-form-username-input"/>
-                <input type="email" placeholder="Email" class="createaccount-form-email-input"/>
-                <input type="password" placeholder="Password" class="createaccount-form-password-input"/>
-                <input type="password" placeholder="Re-Enter Password" class="createaccount-form-reenterpassword-input"/>
+            <form class="createaccount-form-layout" action="{{route("register.post")}}" method="POST">
+                @csrf
+                @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <p class="error-return">{{$error}}</p>
+                @endforeach
+                @endif
+                <input type="text" placeholder="Username" class="createaccount-form-username-input" name="username"/>
+                <input type="email" placeholder="Email" class="createaccount-form-email-input"/ name="email">
+                <input type="password" placeholder="Password" class="createaccount-form-password-input" name="password"/>
+                <input type="password" placeholder="Re-Enter Password" class="createaccount-form-reenterpassword-input" name="password_confirmation"/>
                 <input type="submit" value="Register" class="createaccount-form-submit-input">
-                <a href="#"class="createaccount-form-signin-link">Got Account? Sign In</a>
+                <a href="{{route('landing.index')}}"class="createaccount-form-signin-link">Got Account? Sign In</a>
             </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
