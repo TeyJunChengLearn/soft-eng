@@ -1,0 +1,54 @@
+:root {
+    --color-white: #f7f7f7;
+    --color-grey: #818181;
+    --color-black: #000000;
+}
+
+.custom-white {
+    background-color: var(--color-white);
+    color: #000000;
+}
+
+.custom-grey {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+}
+
+.custom-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.text-custom-white {
+    color: var(--color-white);
+}
+
+.text-custom-grey {
+    color: var(--color-grey);
+}
+
+.text-custom-black {
+    color: var(--color-black);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}

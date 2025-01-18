@@ -1,0 +1,392 @@
+.login-page{
+    display: flex;
+    /* width: 1920px; */
+    height: 1065px;
+    padding: 82px 711px;
+    align-items: center;
+    gap: 10px;
+    background-color: #f7f7f7;
+}
+
+.login-center-container{
+    display: flex;
+    width: 497px;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+    background: #F7F7F7;
+}
+
+.login-form-container{
+    display: flex;
+    padding: 49px 31px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-self: stretch;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+.login-image{
+    width: 307px;
+    height: 395px;
+}
+
+.login-form-email-input,
+.login-form-password-input,
+.createaccount-form-username-input,
+.createaccount-form-email-input,
+.createaccount-form-password-input,
+.createaccount-form-reenterpassword-input,
+.forgotpassword-form-email-input{
+    display: flex;
+    padding: 16px 13px 16px 13px;
+    align-items: center;
+    align-self: stretch;
+    border: 1px solid #000;
+    background: #818181;
+    color:#F7F7F7;
+    font-size: 30px;
+    
+}
+
+.login-form-email-input::placeholder,
+.login-form-password-input::placeholder,
+.createaccount-form-username-input::placeholder,
+.createaccount-form-email-input::placeholder,
+.createaccount-form-password-input::placeholder,
+.createaccount-form-reenterpassword-input::placeholder,
+.forgotpassword-form-email-input::placeholder{
+    color:#F7F7F7;
+
+}
+
+.login-form-email-input,
+.login-form-email-input::placeholder,
+.login-form-password-input
+.login-form-password-input::placeholder,
+.createaccount-form-username-input,
+.createaccount-form-username-input::placeholder,
+.createaccount-form-email-input,
+.createaccount-form-email-input::placeholder,
+.createaccount-form-password-input,
+.createaccount-form-password-input::placeholder,
+.createaccount-form-reenterpassword-input,
+.createaccount-form-reenterpassword-input::placeholder,
+.forgotpassword-form-email-input,
+.forgotpassword-form-email-input::placeholder{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-form-forgotpassword-link,
+.login-create-account-link,
+.createaccount-form-signin-link{
+    align-self: stretch;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.login-form-submit-input,
+.createaccount-form-submit-input,
+.forgotpassword-form-submit-input{
+    display: flex;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 20px;
+    background: #000;
+    color:#F7F7F7;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.createaccount-page{
+    display: flex;
+    /* width: 1920px; */
+    height: 1065px;
+    padding: 199px 279px;
+    align-items: center;
+    gap: 492px;
+    background: #F7F7F7;
+}
+.createaccount-image{
+    width: 307px;
+    height: 395px;
+    flex-shrink: 0;
+}
+.createaccount-form-layout{
+    display: flex;
+    width: 497px;
+    padding: 50px 31px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 39px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: #f7f7f7;
+}
+.forgotpassword-page{
+    display: flex;
+    /* width: 1920px; */
+    height: 1065px;
+    padding: 103px 711px;
+    flex-direction: column;
+    align-items: center;
+    gap: 51px;
+    background-color: #f7f7f7;
+}
+.forgotpassword-img{
+    width: 307px;
+    height: 395px;
+    flex-shrink: 0;
+}
+.forgotpassword-form-layout{
+    display: flex;
+    width: 497px;
+    padding: 20px 31px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: #f7f7f7;
+}
+.forgotpassword-form-paragraph-1{
+    color: #000;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.forgotpassword-form-paragraph-2{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.error-return{
+    color: #F00;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.selectrole-page{
+    display: flex;
+    width: 1920px;
+    height: 1065px;
+    padding: 32px 35px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #F7F7F7;
+}
+
+.selectrole-container{
+    display: flex;
+    height: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: #818181;
+}
+
+.selectrole-top-text-container{
+    display: flex;
+    padding: 77px 415.5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#F7F7F7
+}
+.selectrole-text{
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.selectrole-below-left-text-container{
+    display: flex;
+    padding: 213px 88px;
+    align-items: center;
+    gap: 10px;
+    background-color: #F7F7F7;
+}
+
+.selectrole-below-center-text-container{
+    display: flex;
+    height: 500px;
+    padding: 0px 152px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+
+}
+
+.selectrole-below-right-text-container{
+    display: flex;
+    height: 500px;
+    padding: 0px 138px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+
+}
+
+.selectrole-below-container{
+    display: flex;
+    width: 1850px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 67px;
+    flex-shrink: 0;
+    background: #818181;
+
+}
+a{
+    text-decoration: none !important;
+}
+
+.entervetid-page{
+    display: flex;
+    width: 1920px;
+    height: 1065px;
+    padding: 32px 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #F7F7F7;
+}
+
+.entervetid-maincontainer{
+    display: flex;
+    height: 1000px;
+    padding: 317px 87px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: #818181;
+}
+
+.entervetid-subcontainer{
+    display: flex;
+    height: 365px;
+    padding: 0px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: #F7F7F7;
+}
+
+
+.entervetid-form{
+    display: flex;
+    height: 292px;
+    padding: 0px 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #818181;
+}
+
+.entervetid-form-input-id-container{
+    display: flex;
+    width: 1375px;
+    height: 89px;
+    align-items: center;
+    gap: 23px;
+    flex-shrink: 0;
+    background-color: #818181;
+}
+
+.entervetid-form-input-label{
+    color: #F7F7F7;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.entervetid-form-input-id{
+    width: 653px;
+    height: 73px;
+    flex-shrink: 0;
+    background-color: #F7F7F7;
+    color: #818181;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.entervetid-form-input-submit{
+    display: flex;
+    padding: 22px 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #F7F7F7;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.success-return{
+    align-self: stretch;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-align: center;
+    color: green;
+    text-decoration: none;
+}

@@ -1,0 +1,360 @@
+/* General Reset for Flexibility */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+/* Sidebar */
+.user-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%; /* Adjust width relative to screen size */
+    max-width: 300px; /* Ensure a minimum width */
+    height: 100vh; /* Full viewport height */
+    background: #818181;
+
+}
+
+/* Scale content dynamically */
+.user-sidebar-top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1; /* Allow it to stretch or shrink as needed */
+    overflow: hidden; /* Prevent overflow from creating scrollbars */
+}
+
+/* Sidebar List */
+.user-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1; /* Allow list items to shrink or grow */
+}
+
+/* Sidebar Logout */
+.user-sidebar-logout {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Sidebar Logo */
+.user-sidebar-logo {
+    width: 100%; /* Make the image take full width of its container */
+    max-width: 150px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image in its container */
+    margin: 0 auto; /* Add auto margin for horizontal centering */
+}
+
+/* Sidebar List Items */
+.user-sidebar-list-item-notselected,
+.user-sidebar-list-item-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1rem; /* Adjust font size for better scaling */
+    color: #000;
+    border-top: 1px dashed #f7f7f7;
+    border-bottom: 1px dashed #f7f7f7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-sidebar-list-item-selected {
+    background: #f7f7f7;
+    font-weight: bold;
+}
+
+
+/* Main Content */
+.user-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 75%; /* Adjust width relative to screen size */
+    min-width: 500px; /* Ensure minimum content width */
+    background: #f7f7f7;
+    height: 100%; /* Set height to the full viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 0;
+    padding: 0;
+}
+/* Page Title */
+.user-main-pagetitle-container {
+    top: 0;
+    position: sticky;
+    padding: 1rem;
+    background: #fff;
+    border-bottom: 2px solid #000;
+}
+
+.user-main-pagetitle-text {
+    font-size: 2rem;
+    color: #000;
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+/* Content */
+.user-main-content {
+    padding: 1rem;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+/* Form */
+.user-main-content-standardform-form {
+    width: 100%;
+    background: #818181;
+    padding: 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 100%; /* Ensure the form takes full height of the container */
+}
+
+.usermain-content-standardform-form-input-container {
+    display: grid; /* Use CSS Grid for layout */
+    gap: 1rem; /* Add spacing between rows and columns */
+}
+
+.user-main-content-standardform-form-column {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.user-main-content-standardform-form-input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 120px;
+}
+
+
+
+/* Buttons */
+.user-main-content-standardform-form-button-container-row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-shrink: 0;
+}
+
+.user-main-content-standardform-button {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    background: #f7f7f7;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .user-sidebar {
+        width: 30%; /* Sidebar takes more space on smaller screens */
+    }
+
+    .user-main {
+        width: 70%; /* Main content adjusts accordingly */
+    }
+
+    .user-main-pagetitle-text {
+        font-size: 1.5rem;
+    }
+
+    .user-main-content-standardform-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-sidebar {
+        width: 100%;
+        flex-direction: row;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .user-sidebar-list {
+        flex-direction: row;
+        overflow-x: auto; /* Allow horizontal scrolling for small screens */
+        gap: 0.5rem;
+    }
+
+    .user-main {
+        width: 100%;
+    }
+
+    .user-main-pagetitle-container {
+        padding: 0.5rem;
+    }
+
+    .user-main-pagetitle-text {
+        font-size: 1.2rem;
+    }
+
+    .user-main-content-standardform-button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-sidebar {
+        width: 100%;
+    }
+
+    .user-main-pagetitle-text {
+        font-size: 1rem;
+    }
+
+    .user-main-content-standardform-button {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+}
+
+.user-main-content-standardform-form-row {
+    display: flex; /* Arrange items in a row */
+    gap: 20px; /* Add spacing between columns */
+    margin-bottom: 1rem; /* Add spacing between rows */
+}
+
+.user-main-content-standardform-form-column {
+    flex: 1; /* Allow columns to grow and take equal space */
+    display: flex;
+    flex-direction: column;
+}
+
+.user-main-content-standardform-form-label {
+    margin-bottom: 0.5rem; /* Add spacing below label */
+    font-size: 1rem;
+    color: white;
+}
+
+.user-main-content-standardform-form-input {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f7f7f7;
+    color: #000;
+}
+.user-main-content-searchbar-form {
+    width: 100%; /* Adjust width as needed */
+    display: flex;
+}
+
+.user-main-content-searchbar-input {
+    width: 50%; /* Adjust width as needed */
+    padding: 10px 15px; /* Add padding inside the input field */
+    font-size: 1rem; /* Adjust font size */
+    background-color: grey; /* Grey background color */
+    color: white; /* White font color */
+    border: 1px solid grey; /* Match the border color to the background */
+    border-radius: 25px; /* Rounded edges */
+    outline: none; /* Remove focus outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add smooth transition for focus state */
+}
+
+.user-main-content-searchbar-input::placeholder {
+    color: #dcdcdc; /* Light grey placeholder text */
+}
+
+.user-main-content-searchbar-input:focus {
+    border-color: white; /* Highlight border on focus */
+    box-shadow: 0 0 5px white; /* Add a subtle white glow on focus */
+}
+
+
+.user-main-content-21rowtable-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user-main-content-21rowtable {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are shared between cells */
+    table-layout: auto;
+    font-size: 12px;
+}
+
+.user-main-content-21rowtable th,
+.user-main-content-21rowtable td {
+    border: 1px solid black; /* Add border to table cells */
+    padding: 5px; /* Add padding for better readability */
+}
+
+.user-main-content-21rowtable th {
+    background-color: grey; /* Set grey background for table head */
+    color: white; /* Set white text color for table head */
+    font-weight: bold; /* Make header text bold */
+}
+
+.user-main-content-21rowtable td {
+    background-color: #f7f7f7; /* Light background for table rows */
+    color: black; /* Black text color for table data */
+}
+
+.pagination .page-link {
+    color: black; /* Text color */
+    background-color: #f7f7f7; /* Background color for links */
+    border: 1px solid #f7f7f7; /* Border color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background-color: grey; /* Darker blue on hover */
+    color: white; /* Text color on hover */
+    border-color: grey; /* Match border color */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: black; /* Green background for active page */
+    border-color: black; /* Match border for active page */
+    color: white; /* White text for active page */
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #e9ecef; /* Light grey background for disabled */
+    border-color: #e9ecef; /* Light grey border for disabled */
+    color: #6c757d; /* Grey text for disabled */
+}
