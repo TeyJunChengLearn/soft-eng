@@ -11,10 +11,15 @@ class Caretaker extends Model
     protected $fillable=[
         "status",
         "user_id",
+        "manager_id",
     ];
 
     public function user(){
         return $this->belongsTo(User::class,"user_id","id");
+    }
+
+    public function manager(){
+        return $this->belongsTo(Manager::class,"manager_id","id");
     }
 
     public function adoption(){
