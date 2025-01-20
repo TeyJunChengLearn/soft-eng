@@ -24,4 +24,8 @@ class Manager extends Model
     public function sanctuary(){
         return $this->hasMany(Sanctuary::class,"manager_id","id");
     }
+
+    public function caretaker(){
+        return $this->hasMany(Caretaker::class,"manager_id","id");
+    }
 }
