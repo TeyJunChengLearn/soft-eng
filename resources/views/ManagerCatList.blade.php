@@ -37,7 +37,7 @@
                     Table Head
                 </th>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -54,7 +54,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -71,7 +71,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -88,7 +88,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -105,7 +105,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -122,7 +122,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -139,7 +139,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -156,7 +156,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -173,7 +173,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -190,7 +190,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -207,7 +207,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -224,7 +224,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -241,7 +241,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -258,7 +258,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -275,7 +275,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -292,7 +292,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -309,7 +309,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -326,7 +326,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -343,7 +343,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -360,7 +360,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -377,7 +377,7 @@
                     Table Data
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata" data-href="link1.html">
+            <tr class="user-main-content-21rowtable-tabledata">
                 <td>
                     Table Data
                 </td>
@@ -415,14 +415,4 @@
         </nav>
     </div>
 </div>
-<script>
-    document.querySelectorAll('.user-main-content-6rowtable-tabledata').forEach(row => {
-        row.addEventListener('click', () => {
-            const url = row.getAttribute('data-href');
-            if (url) {
-                window.location.href = url;
-            }
-        });
-    });
-</script>
 @endsection

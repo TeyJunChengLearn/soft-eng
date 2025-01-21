@@ -71,7 +71,7 @@ html, body {
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    font-size: 1rem; /* Adjust font size for better scaling */
+    font-size: 1.2rem; /* Adjust font size for better scaling */
     color: #000;
     border-top: 1px dashed #f7f7f7;
     border-bottom: 1px dashed #f7f7f7;
@@ -83,6 +83,11 @@ html, body {
 .user-sidebar-list-item-selected {
     background: #f7f7f7;
     font-weight: bold;
+}
+
+.user-sidebar-list a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the color from the parent element */
 }
 
 
@@ -333,6 +338,54 @@ textarea {
     background-color: #f7f7f7; /* Light background for table rows */
     color: black; /* Black text color for table data */
 }
+.user-main-content-21rowtable-tabledata {
+    cursor: pointer; /* Show pointer cursor to indicate clickability */
+    transition: background-color 0.3s; /* Add a hover effect */
+}
+
+.user-main-content-21rowtable-tabledata:hover {
+    background-color: #e0e0e0; /* Light grey for hover */
+}
+
+.user-main-content-6rowtable-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user-main-content-6rowtable {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders are shared between cells */
+    table-layout: auto;
+    font-size: 14px;
+}
+
+.user-main-content-6rowtable th,
+.user-main-content-6rowtable td {
+    border: 1px solid black; /* Add border to table cells */
+    padding: 10px; /* Add padding for better readability */
+    height: 50px;
+}
+
+.user-main-content-6rowtable th {
+    background-color: grey; /* Set grey background for table head */
+    color: white; /* Set white text color for table head */
+    font-weight: bold; /* Make header text bold */
+}
+
+.user-main-content-6rowtable td {
+    background-color: #f7f7f7; /* Light background for table rows */
+    color: black; /* Black text color for table data */
+}
+
+.user-main-content-6rowtable-tabledata {
+    cursor: pointer; /* Show pointer cursor to indicate clickability */
+    transition: background-color 0.3s; /* Add a hover effect */
+}
+
+.user-main-content-6rowtable-tabledata:hover {
+    background-color: #e0e0e0; /* Light grey for hover */
+}
+
 
 .pagination .page-link {
     color: black; /* Text color */
