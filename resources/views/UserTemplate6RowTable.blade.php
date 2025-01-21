@@ -18,9 +18,9 @@
                 <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
                     <a href="#" class="btn btn-dark">Create</a>
                 </div>
-                <div class="user-main-content-21rowtable-container">
-                    <table class="user-main-content-21rowtable">
-                        <tr class="user-main-content-21rowtable-tablehead">
+                <div class="user-main-content-6rowtable-container">
+                    <table class="user-main-content-6rowtable">
+                        <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Table Head
                             </th>
@@ -37,7 +37,7 @@
                                 Table Head
                             </th>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -54,7 +54,7 @@
                                 Table Data
                             </td>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -71,7 +71,7 @@
                                 Table Data
                             </td>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -88,7 +88,7 @@
                                 Table Data
                             </td>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -105,7 +105,7 @@
                                 Table Data
                             </td>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -122,7 +122,7 @@
                                 Table Data
                             </td>
                         </tr>
-                        <tr class="user-main-content-21rowtable-tabledata">
+                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
                                 Table Data
                             </td>
@@ -162,4 +162,14 @@
                     </nav>
                 </div>
             </div>
+            <script>
+                document.querySelectorAll('.user-main-content-6rowtable-tabledata').forEach(row => {
+                    row.addEventListener('click', () => {
+                        const url = row.getAttribute('data-href');
+                        if (url) {
+                            window.location.href = url;
+                        }
+                    });
+                });
+            </script>
         @endsection
