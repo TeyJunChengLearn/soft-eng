@@ -22,7 +22,7 @@
 
                 <input class="login-form-email-input" placeholder="Email" type="email" name="email"/>
                 <input class="login-form-password-input" placeholder="Password" type="password" name="password">
-                <a href="#" class="login-form-forgotpassword-link">Forgot Password?</a>
+                <a href="{{route("forgotPassword.index")}}" class="login-form-forgotpassword-link">Forgot Password?</a>
                 <input class="login-form-submit-input" type="submit" value="Log In"/>
                 <a href="{{route("register.index")}}" class="login-create-account-link">Create a new account</a>
             </form>

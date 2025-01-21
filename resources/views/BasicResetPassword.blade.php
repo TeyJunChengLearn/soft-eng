@@ -10,11 +10,18 @@
 </head>
 <body>
     <div class="createaccount-page">
-            <img src="assets/cat database logo.jpg" class="createaccount-image"/>
-            <form class="createaccount-form-layout">
-                <p class="error-return">error error</p>
-                <input type="password" placeholder="Password" class="createaccount-form-password-input"/>
-                <input type="password" placeholder="Re-Enter Password" class="createaccount-form-reenterpassword-input"/>
+            <img src="/assets/cat database logo.jpg" class="createaccount-image"/>
+            <form class="createaccount-form-layout" action="{{route("resetPassword.post") }}" method="POST">
+                @if($errors->Any())
+                    @foreach($errors->all() as $error)
+                        <p class="error-return">{{$error}}</p>
+                    @endforeach
+                @endif
+                @csrf
+                <input type="text" hidden value="{{$tokenID}}" name="token">
+                <input type="email" placeholder="Email" class="createaccount-form-password-input" name="email"/>
+                <input type="password" placeholder="Password" class="createaccount-form-password-input" name="password"/>
+                <input type="password" placeholder="Re-Enter Password" class="createaccount-form-reenterpassword-input" name="password_confirmation"/>
                 <input type="submit" value="Reset Password" class="createaccount-form-submit-input">
             </form>
     </div>

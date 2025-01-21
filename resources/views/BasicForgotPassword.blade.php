@@ -11,17 +11,20 @@
 <body>
     <div class="forgotpassword-page">
         <img src="assets/cat database logo.jpg" class="forgotpassword-img">
-        <form class="forgotpassword-form-layout">
+        <form class="forgotpassword-form-layout" action="{{route('forgotPassword.post')}}" method="POST">
+            @csrf
             <p class="forgotpassword-form-paragraph-1">
                 Forgot Password
             </p>
             <p class="forgotpassword-form-paragraph-2">
                 Please Enter Your Email to reset password
             </p>
-            <input type="email" placeholder="Email" class="forgotpassword-form-email-input"/>
-            <P class="error-return">
-                error error
-            </P>
+            <input type="email" placeholder="Email" class="forgotpassword-form-email-input" name="email"/>
+            @if($errors->Any())
+                    @foreach($errors->all() as $error)
+                        <p class="error-return">{{$error}}</p>
+                    @endforeach
+                @endif
             <input type="submit" value="Enter" class="forgotpassword-form-submit-input"/>
         </form>
     </div>

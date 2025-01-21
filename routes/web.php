@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SelectRoleController;
 use App\Http\Controllers\InterfaceUseController;
+use App\Http\Controllers\ResetPasswordController;
 
 
 Route::get('/design', [InterfaceUseController::class,'index']);
@@ -37,5 +38,10 @@ Route::get('/selectRole/caretaker',[SelectRoleController::class,'caretaker'])->n
 //     Route::get('/selectRole/caretaker',[SelectRoleController::class,'caretaker'])->name('selectRole.caretaker');
 // });
 
+Route::get("/forgotPassword",[ResetPasswordController::class,"forgotPasswordIndex"])->name('forgotPassword.index');
 
+Route::get("/password/reset/{token}",[ResetPasswordController::class,"resetPasswordIndex"])->name('resetPassword.index');
 
+Route::post("password/reset",[ResetPasswordController::class,"resetPassword"])->name('resetPassword.post');
+
+Route::post("/forgotPassword",[ResetPasswordController::class,"sendResetLinkEmail"])->name("forgotPassword.post");
