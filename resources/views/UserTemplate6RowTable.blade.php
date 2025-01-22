@@ -36,8 +36,11 @@
                             <th>
                                 Table Head
                             </th>
+                            <th>
+                                Action
+                            </th>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
+                        <tr class="user-main-content-6rowtable-tabledata"  >
                             <td>
                                 Table Data
                             </td>
@@ -53,25 +56,13 @@
                             <td>
                                 Table Data
                             </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
+                                <a href="link1.html">
+                                    Action
+                                </a>
                             </td>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
+                        <tr class="user-main-content-6rowtable-tabledata"  >
                             <td>
                                 Table Data
                             </td>
@@ -87,25 +78,13 @@
                             <td>
                                 Table Data
                             </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
                             <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
+                                <a href="link1.html">
+                                    Action
+                                </a>
                             </td>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
+                        <tr class="user-main-content-6rowtable-tabledata"  >
                             <td>
                                 Table Data
                             </td>
@@ -120,9 +99,14 @@
                             </td>
                             <td>
                                 Table Data
+                            </td>
+                            <td>
+                                <a href="link1.html">
+                                    Action
+                                </a>
                             </td>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata" data-href="link1.html">
+                        <tr class="user-main-content-6rowtable-tabledata"  >
                             <td>
                                 Table Data
                             </td>
@@ -137,6 +121,55 @@
                             </td>
                             <td>
                                 Table Data
+                            </td>
+                            <td>
+                                <a href="link1.html">
+                                    Action
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="user-main-content-6rowtable-tabledata"  >
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                <a href="link1.html">
+                                    Action
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="user-main-content-6rowtable-tabledata"  >
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
+                            </td>
+                            <td>
+                                <a href="link1.html">
+                                    Action
+                                </a>
                             </td>
                         </tr>
 
@@ -162,14 +195,4 @@
                     </nav>
                 </div>
             </div>
-            <script>
-                document.querySelectorAll('.user-main-content-6rowtable-tabledata').forEach(row => {
-                    row.addEventListener('click', () => {
-                        const url = row.getAttribute('data-href');
-                        if (url) {
-                            window.location.href = url;
-                        }
-                    });
-                });
-            </script>
         @endsection
