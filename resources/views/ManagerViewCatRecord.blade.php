@@ -1,11 +1,11 @@
-@extends('layouts.UserTemplate')
+@extends('layouts.ManagerTemplate')
 
-@section('title',"Long Form")
+@section('title',"View Cat Record")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Title
+        View Cat Record
     </p>
 </div>
 <div class="user-main-content">
@@ -16,23 +16,24 @@
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <div type="text" class="user-main-content-standardform-form-input">
+                        <div type="text" class="user-main-content-standardform-form-input">Nicholas
+                        </div>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <div type="text" class="user-main-content-standardform-form-input">
+                        <div type="text" class="user-main-content-standardform-form-input">idfuckingknow
                         </div>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <div type="text" class="user-main-content-standardform-form-input">
+                        <div type="text" class="user-main-content-standardform-form-input">Ragdoll
                         </div>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <div type="text" class="user-main-content-standardform-form-input">
+                        <div type="text" class="user-main-content-standardform-form-input">They/Them
                         </div>
                     </div>
                 </div>

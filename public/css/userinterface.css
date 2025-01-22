@@ -337,14 +337,58 @@ textarea {
 .user-main-content-21rowtable td {
     background-color: #f7f7f7; /* Light background for table rows */
     color: black; /* Black text color for table data */
-}
-.user-main-content-21rowtable-tabledata {
-    cursor: pointer; /* Show pointer cursor to indicate clickability */
-    transition: background-color 0.3s; /* Add a hover effect */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    text-overflow: ellipsis;
 }
 
-.user-main-content-21rowtable-tabledata:hover {
-    background-color: #e0e0e0; /* Light grey for hover */
+.manager-sanctuary-list td:nth-child(1) {
+    max-width: 100px; /* Max width for Name column */
+}
+.manager-sanctuary-list td:nth-child(2) {
+    max-width: 300px; /* Max width for Name column */
+}
+.manager-sanctuary-list td:nth-child(3) {
+    max-width: 50px; /* Max width for Name column */
+}
+/*.sanctuary-list td:nth-child(3) {
+    text-align: center;
+    vertical-align: middle;
+} */
+
+.manager-cat-records th,
+.manager-cat-records td {
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    text-align: left; /* Align text to the left */
+}
+
+/* Specific max-widths for each column in manager-cat-records */
+.manager-cat-records th:nth-child(1),
+.manager-cat-records td:nth-child(1) {
+    max-width: 150px; /* Name column */
+}
+
+.manager-cat-records th:nth-child(2),
+.manager-cat-records td:nth-child(2) {
+    max-width: 120px; /* Breed column */
+}
+
+.manager-cat-records th:nth-child(3),
+.manager-cat-records td:nth-child(3) {
+    max-width: 80px; /* Gender column */
+}
+
+.manager-cat-records th:nth-child(4),
+.manager-cat-records td:nth-child(4) {
+    max-width: 120px; /* Birthdate column */
+}
+
+.manager-cat-records th:nth-child(5),
+.manager-cat-records td:nth-child(5) {
+    max-width: 100px; /* Action column */
+    text-align: center; /* Center align icons */
 }
 
 .user-main-content-6rowtable-container {
@@ -375,15 +419,6 @@ textarea {
 .user-main-content-6rowtable td {
     background-color: #f7f7f7; /* Light background for table rows */
     color: black; /* Black text color for table data */
-}
-
-.user-main-content-6rowtable-tabledata {
-    cursor: pointer; /* Show pointer cursor to indicate clickability */
-    transition: background-color 0.3s; /* Add a hover effect */
-}
-
-.user-main-content-6rowtable-tabledata:hover {
-    background-color: #e0e0e0; /* Light grey for hover */
 }
 
 

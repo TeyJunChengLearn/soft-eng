@@ -1,11 +1,11 @@
-@extends('layouts.UserTemplate')
+@extends('layouts.ManagerTemplate')
 
-@section('title',"21 Row Table")
+@section('title',"Cat Records")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Title
+        Cat Records
     </p>
 </div>
 <div class="user-main-content">
@@ -19,22 +19,19 @@
         <a href="#" class="btn btn-dark">Create</a>
     </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable">
+        <table class="user-main-content-21rowtable manager-cat-records">
             <tr class="user-main-content-21rowtable-tablehead">
                 <th>
-                    Table Head
+                    Name
                 </th>
                 <th>
-                    Table Head
+                    Breed
                 </th>
                 <th>
-                    Table Head
+                    Gender
                 </th>
                 <th>
-                    Table Head
-                </th>
-                <th>
-                    Table Head
+                    Birthdate
                 </th>
                 <th>
                     Action
@@ -42,24 +39,21 @@
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
-                    Table Data
+                    Muhammad Haziq bin Abdullah Kamaluddin
+                </td>
+                <td>
+                    British Shorthair
                 </td>
                 <td>
                     Table Data
                 </td>
                 <td>
-                    Table Data
+                    01/09/2022
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -76,12 +70,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -98,12 +89,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -120,12 +108,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -142,12 +127,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -164,12 +146,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -186,12 +165,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -208,12 +184,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -230,12 +203,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -252,12 +222,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -274,12 +241,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -296,12 +260,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -318,12 +279,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -340,12 +298,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -362,12 +317,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -384,12 +336,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -406,12 +355,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -428,12 +374,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -450,12 +393,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -472,12 +412,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
@@ -494,12 +431,9 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
+                    <i class="bi bi-eye fs-5"></i>
+                    <i class="bi bi-pencil-square fs-5"></i>
+                    <i class="bi bi-trash3 fs-5"></i>
                 </td>
             </tr>
         </table>

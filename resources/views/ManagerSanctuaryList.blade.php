@@ -1,11 +1,11 @@
-@extends('layouts.UserTemplate')
+@extends('layouts.ManagerTemplate')
 
-@section('title',"21 Row Table")
+@section('title',"Sanctuary List")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Title
+        Sanctuary List
     </p>
 </div>
 <div class="user-main-content">
@@ -19,22 +19,13 @@
         <a href="#" class="btn btn-dark">Create</a>
     </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable">
+        <table class="user-main-content-21rowtable manager-sanctuary-list">
             <tr class="user-main-content-21rowtable-tablehead">
                 <th>
-                    Table Head
+                    Name
                 </th>
                 <th>
-                    Table Head
-                </th>
-                <th>
-                    Table Head
-                </th>
-                <th>
-                    Table Head
-                </th>
-                <th>
-                    Table Head
+                    Address
                 </th>
                 <th>
                     Action
@@ -42,23 +33,27 @@
             </tr>
             <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    Vasudevan Ramachandran Balasubramanian
                 </td>
                 <td>
                     Table Data
                 </td>
                 <td>
                     <a href="link1.html">
-                        Action
+                        Select
+                    </a>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Muhammad Haziq bin Abdullah Kamaluddin
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <a href="link1.html">
+                        Select
                     </a>
                 </td>
             </tr>
@@ -70,17 +65,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -92,17 +78,22 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
+                    <a href="link1.html">
+                        Select
+                    </a>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </td>
                 <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -114,17 +105,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -136,17 +118,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -158,17 +131,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -180,17 +144,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -202,17 +157,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -224,17 +170,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -246,17 +183,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -268,17 +196,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -290,17 +209,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -312,17 +222,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -334,17 +235,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -356,17 +248,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -378,17 +261,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -400,17 +274,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -422,83 +287,8 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
                     <a href="link1.html">
-                        Action
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Action
+                        Select
                     </a>
                 </td>
             </tr>
@@ -523,5 +313,4 @@
         </nav>
     </div>
 </div>
-
 @endsection
