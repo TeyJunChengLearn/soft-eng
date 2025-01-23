@@ -1,11 +1,11 @@
-@extends('layouts.UserTemplate')
+@extends('layouts.ManagerTemplate')
 
-@section('title',"21 Row Table")
+@section('title',"Caretaker Records")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Title
+        Caretaker Records
     </p>
 </div>
 <div class="user-main-content">
@@ -13,48 +13,46 @@
         <form class="user-main-content-searchbar-form">
                 <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
         </form>
+        <div class="user-main-content-searchbar-form">
+            <div class="user-main-content-searchbar-input">Manager ID</div>
+        </div>
+
     </div>
     <!-- with create searchbar container -->
     <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
         <a href="#" class="btn btn-dark">Create</a>
     </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable">
+        <table class="user-main-content-21rowtable manager-cat-records">
             <tr class="user-main-content-21rowtable-tablehead">
                 <th>
-                    Table Head
+                    Email
                 </th>
                 <th>
-                    Table Head
+                    Username
                 </th>
                 <th>
-                    Table Head
+                    Last Updated By
                 </th>
                 <th>
-                    Table Head
-                </th>
-                <th>
-                    Table Head
+                    Action
                 </th>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
-                    Table Data
+                    Muhammad Haziq bin Abdullah Kamaluddin
                 </td>
                 <td>
-                    Table Data
+                    British Shorthair
                 </td>
                 <td>
-                    Table Data
+                    01/09/2022
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -65,13 +63,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -82,13 +77,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -99,13 +91,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -116,13 +105,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -133,13 +119,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -150,13 +133,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -167,13 +147,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -184,13 +161,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -201,13 +175,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -218,13 +189,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -235,13 +203,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -252,13 +217,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -269,13 +231,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -286,13 +245,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -303,13 +259,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -320,13 +273,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -337,13 +287,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -354,13 +301,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -371,13 +315,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -388,10 +329,7 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-eye fs-5"></i>
                 </td>
             </tr>
         </table>
@@ -415,4 +353,5 @@
         </nav>
     </div>
 </div>
+
 @endsection
