@@ -1,11 +1,11 @@
-@extends('layouts.UserTemplate')
+@extends('layouts.CaretakerTemplate')
 
-@section('title',"21 Row Table")
+@section('title',"Adoptions (Cat List)")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Title
+        Adoptions (Cat List)
     </p>
 </div>
 <div class="user-main-content">
@@ -15,63 +15,43 @@
         </form>
     </div>
     <!-- with create searchbar container -->
-    <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-        <a href="#" class="btn btn-dark">Create</a>
-    </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable">
+        <table class="user-main-content-21rowtable manager-cat-records">
             <tr class="user-main-content-21rowtable-tablehead">
                 <th>
-                    Table Head
+                    Name
                 </th>
                 <th>
-                    Table Head
+                    Breed
                 </th>
                 <th>
-                    Table Head
+                    Gender
                 </th>
                 <th>
-                    Table Head
+                    Birthdate
                 </th>
                 <th>
-                    Table Head
+                    Remove
                 </th>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
-                    Table Data
+                    Muhammad Haziq bin Abdullah Kamaluddin
+                </td>
+                <td>
+                    British Shorthair
                 </td>
                 <td>
                     Table Data
                 </td>
                 <td>
-                    Table Data
+                    01/09/2022
                 </td>
                 <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -85,27 +65,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -119,27 +82,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -153,27 +99,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -187,27 +116,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -221,27 +133,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -255,27 +150,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -289,27 +167,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -323,27 +184,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -357,27 +201,10 @@
                     Table Data
                 </td>
                 <td>
-                    Table Data
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata">
+            <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
                     Table Data
                 </td>
@@ -391,7 +218,177 @@
                     Table Data
                 </td>
                 <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
                     Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
+                </td>
+            </tr>
+            <tr class="user-main-content-21rowtable-tabledata"  >
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    Table Data
+                </td>
+                <td>
+                    <i class="bi bi-x-square fs-3"></i>
                 </td>
             </tr>
         </table>
@@ -415,4 +412,5 @@
         </nav>
     </div>
 </div>
+
 @endsection
