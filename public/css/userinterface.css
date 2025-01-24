@@ -447,6 +447,10 @@ textarea {
     text-align: center;
 }
 
+.activity-history-table td:nth-child(4)
+{
+    text-align: center;
+}
 .user-main-content-6rowtable-container {
     margin-top: 10px;
     margin-bottom: 10px;
