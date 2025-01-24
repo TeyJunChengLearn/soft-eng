@@ -1,11 +1,11 @@
-@extends('layouts.ManagerTemplate')
+@extends('layouts.CaretakerTemplate')
 
-@section('title',"Cats' Activity")
+@section('title',"Sanctuary Task")
 
 @section('content')
             <div class="user-main-pagetitle-container">
                 <p class="user-main-pagetitle-text">
-                    Cats' Activity
+                    Sanctuary Task
                 </p>
             </div>
             <div class="user-main-content">
@@ -19,7 +19,7 @@
                     <a href="#" class="btn btn-dark">Create</a>
                 </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable summary-table">
+                    <table class="user-main-content-6rowtable sanctuary-task-table">
                         <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Recorded Date
@@ -28,7 +28,7 @@
                                 Summary
                             </th>
                             <th>
-                                Activity
+                                View
                             </th>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -39,9 +39,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -52,9 +50,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -65,9 +61,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -78,9 +72,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -91,9 +83,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -104,9 +94,7 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                <i class="bi bi-eye fs-4"></i>
                             </td>
                         </tr>
 

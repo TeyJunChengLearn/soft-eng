@@ -1,4 +1,4 @@
-@extends('layouts.ManagerTemplate')
+@extends('layouts.CaretakerTemplate')
 
 @section('title',"Cats' Activity")
 

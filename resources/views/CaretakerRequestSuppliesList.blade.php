@@ -1,11 +1,11 @@
 @extends('layouts.ManagerTemplate')
 
-@section('title',"Cats' Activity")
+@section('title',"Request Supplies")
 
 @section('content')
             <div class="user-main-pagetitle-container">
                 <p class="user-main-pagetitle-text">
-                    Cats' Activity
+                    Request Supplies
                 </p>
             </div>
             <div class="user-main-content">
@@ -19,16 +19,19 @@
                     <a href="#" class="btn btn-dark">Create</a>
                 </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable summary-table">
+                    <table class="user-main-content-6rowtable ">
                         <tr class="user-main-content-6rowtable-tablehead">
+                            <th>
+                                Item Name
+                            </th>
+                            <th>
+                                Sanctuary Name
+                            </th>
                             <th>
                                 Recorded Date
                             </th>
                             <th>
-                                Summary
-                            </th>
-                            <th>
-                                Activity
+                                Qty
                             </th>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -39,9 +42,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -52,9 +56,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -65,9 +70,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -78,9 +84,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -91,9 +98,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
                         <tr class="user-main-content-6rowtable-tabledata"  >
@@ -104,9 +112,10 @@
                                 Table Data
                             </td>
                             <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
+                                Table Data
+                            </td>
+                            <td>
+                                Table Data
                             </td>
                         </tr>
 

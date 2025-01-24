@@ -432,6 +432,21 @@ textarea {
 .appointment-table td:nth-child(4){
     text-align: center;
 }
+
+.sanctuary-task-table th:nth-child(1),
+.sanctuary-task-table td:nth-child(1){
+    max-width: 50px;
+}
+
+.sanctuary-task-table th:nth-child(3),
+.sanctuary-task-table td:nth-child(3){
+    max-width: 20px;
+}
+
+.sanctuary-task-table td:nth-child(3){
+    text-align: center;
+}
+
 .user-main-content-6rowtable-container {
     margin-top: 10px;
     margin-bottom: 10px;
