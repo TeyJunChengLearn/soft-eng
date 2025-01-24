@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class InterfaceUseController extends Controller
 {
     public function index(Request $request){
-        return view("ManagerRequestSupplies");
+        return view("MedicalStaffRequestJoinGroup");
     }
 }

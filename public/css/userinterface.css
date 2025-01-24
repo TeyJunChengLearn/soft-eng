@@ -419,6 +419,19 @@ textarea {
     max-width: 20px; /* Name column */
 }
 
+
+.medical-care-table th:nth-child(3),
+.medical-care-table td:nth-child(3) {
+    max-width: 20px; /* Center align icons */
+}
+
+.medical-care-table td:nth-child(3) {
+    text-align: center; /* Center align icons */
+}
+
+.appointment-table td:nth-child(4){
+    text-align: center;
+}
 .user-main-content-6rowtable-container {
     margin-top: 10px;
     margin-bottom: 10px;
