@@ -14,10 +14,6 @@
                             <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
                     </form>
                 </div>
-                <!-- with create searchbar container -->
-                <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-                    <a href="#" class="btn btn-dark">Create</a>
-                </div>
                 <div class="user-main-content-6rowtable-container">
                     @if($catHealthRecords->isEmpty())
                     <p> There are no any health record for this cat</P>
@@ -44,7 +40,7 @@
                         </td>
                         <td>
                             <a href="{{route('medicalStaff.medicalCare.List',['healthRecordID'=>$catHealthRecord->id])}}">
-                                view
+                                Select
                             </a>
                         </td>
                     </tr>

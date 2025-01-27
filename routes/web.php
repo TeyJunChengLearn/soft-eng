@@ -95,9 +95,9 @@ Route::post('/medicalStaff/treatment/list/{healthRecordID}/add',[MedicalStaffTre
 Route::get('/medicalStaff/medicalCare/sanctuaryList',[MedicalStaffMedicalCareSanctuaryListController::class,'index'])->name('medicalStaff.medicalCare.sanctuaryList');
 Route::get('/medicalStaff/medicalCare/catList/{sanctuaryID}',[MedicalStaffMedicalCareCatListController::class,'index'])->name('medicalStaff.medicalCare.catList');
 Route::get('medicalStaff/medicalCare/summaryList/{catID}',[MedicalStaffMedicalCareSummaryListController::class,'index'])->name('medicalStaff.medicalCare.summaryList');
-Route::get('/medicalStaff/treatment/list/{healthRecordID}',[MedicalStaffMedicalCareListController::class,'index'])->name('medicalStaff.medicalCare.List');
-Route::get('/medicalStaff/treatment/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'index'])->name('medicalStaff.medicalCare.add.index');
-Route::post('/medicalStaff/treatment/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'add'])->name('medicalStaff.medicalCare.add.post');
+Route::get('/medicalStaff/medicalCare/list/{healthRecordID}',[MedicalStaffMedicalCareListController::class,'index'])->name('medicalStaff.medicalCare.List');
+Route::get('/medicalStaff/medicalCare/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'index'])->name('medicalStaff.medicalCare.add.index');
+Route::post('/medicalStaff/medicalCare/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'add'])->name('medicalStaff.medicalCare.add.post');
 //appointment
 Route::get('/medicalStaff/appointment',[MedicalStaffAppointmentListController::class,'index'])->name('medicalStaff.appointment.list');
 Route::get('/medicalStaff/appointment/add/sanctuaryList',[MedicalStaffAppointmentSanctuaryListController::class,'index'])->name('medicalStaff.appointment.add.sanctuaryList');
