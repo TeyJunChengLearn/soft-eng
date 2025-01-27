@@ -11,119 +11,54 @@
             <div class="user-main-content">
                 <div class="user-main-content-searchbar-container-for-21rowtable">
                     <form class="user-main-content-searchbar-form">
-                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name="search">
                     </form>
                 </div>
                 <!-- with create searchbar container -->
                 <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-                    <a href="#" class="btn btn-dark">Create</a>
+                    <a href="{{route('medicalStaff.medicalCare.add.index',['healthRecordID'=>$healthRecordID])}}" class="btn btn-dark">Create</a>
                 </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable medical-care-table">
-                        <tr class="user-main-content-6rowtable-tablehead">
-                            <th>
-                                Medicine
-                            </th>
-                            <th>
-                                Arrangement
-                            </th>
-                            <th>
-                                Activity
-                            </th>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-pencil-square fs-5"></i>
-                                <i class="bi bi-trash 3 fs-5"></i>
-                            </td>
-                        </tr>
-
+                    @if($medicalCareRecords->isEmpty())
+                        <p> There are no any medical care record on this health record.</p>
+                        @else
+                        <table class="user-main-content-6rowtable medical-care-table">
+                            <tr class="user-main-content-6rowtable-tablehead">
+                                <th>
+                                    Medicine
+                                </th>
+                                <th>
+                                    Arrangement
+                                </th>
+                                <th>
+                                    Activity
+                                </th>
+                            </tr>
+                            @foreach ($medicalCareRecords as $medicalCareRecord)
+                                <tr class="user-main-content-6rowtable-tabledata"  >
+                                <td>
+                                    {{$medicalCareRecord->medicine_name}}
+                                </td>
+                                <td>
+                                    {{$medicalCareRecord->arrangement}}
+                                </td>
+                                <td>
+                                    <a href="link1.html">
+                                        view
+                                    </a>
+                                </td>
+                            </tr>
+                            @endforeach
 
                     </table>
+                    @endif
+
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">
-                    <nav role="navigation" aria-label="Pagination Navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled" aria-disabled="true">
-                                <span class="page-link">Previous</span>
-                            </li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" rel="next">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @if(!$medicalCareRecords->isEmpty())
+                {{$medicalCareRecords->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+                @endif
                 </div>
             </div>
         @endsection

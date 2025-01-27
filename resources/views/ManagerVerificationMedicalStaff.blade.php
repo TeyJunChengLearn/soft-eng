@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <!-- with create searchbar container -->
-                
+
                 <div class="user-main-content-6rowtable-container">
                     <table class="user-main-content-6rowtable verification-medical-staff">
                         <tr class="user-main-content-6rowtable-tablehead">

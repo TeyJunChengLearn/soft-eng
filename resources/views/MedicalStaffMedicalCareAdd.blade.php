@@ -9,47 +9,51 @@
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form">
-
+    <form class="user-main-content-standardform-form" method="POST" action="{{route('medicalStaff.medicalCare.add.post',['healthRecordID'=>$healthRecordID])}}">
+        @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->name}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->birthdate}}" readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->breed}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder=@if($cat->gender==false)
+                        "Female"
+                        @else
+                        "Male"
+                    @endif readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Medicine</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="" name="medicine_name" required>
                     </div>
                 </div>
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">Arrangement</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);"></textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="arrangement" required></textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <button type="submit" class="user-main-content-standardform-button">
                 Confirm
-                </a>
+                </button>
             </div>
         </div>
     </form>

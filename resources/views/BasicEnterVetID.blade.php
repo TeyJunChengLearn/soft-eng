@@ -12,12 +12,13 @@
     <div class="entervetid-page">
         <div class="entervetid-maincontainer">
             <div class="entervetid-subcontainer">
-                <form class="entervetid-form">
+                <form class="entervetid-form" action="{{route("medicalStaff.saveID.post")}}" method="POST">
+                    @csrf
                     <div class="entervetid-form-input-id-container">
                         <p class="entervetid-form-input-label">
                             Please enter your VetID:
                         </p>
-                        <input type="text" class="entervetid-form-input-id"/>
+                        <input type="text" class="entervetid-form-input-id" name="vet_id"/>
                     </div>
                     <input type="submit" class="entervetid-form-input-submit" value="Confirm"/>
                 </form>

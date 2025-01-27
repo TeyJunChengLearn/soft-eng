@@ -14,7 +14,7 @@
     <div class="page">
         <div class="user-sidebar">
             <div class="user-sidebar-top-container">
-                    <img src="assets/cat database logo.jpg" class="user-sidebar-logo">
+                    <img src="/assets/cat database logo.jpg" class="user-sidebar-logo">
                 <div class="user-sidebar-list">
                     <a href="#">
                         <div class="user-sidebar-list-item-{{ Request::is('cat-records') ? 'selected' : 'notselected' }}">
@@ -42,7 +42,7 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="user-sidebar-list-item-selected">
+                        <div class="user-sidebar-list-item-notselected">
                             Supplies Request
                         </div>
                     </a>
@@ -54,7 +54,9 @@
                 </div>
             </div>
             <div class="user-sidebar-logout">
-                Log Out
+                <a href="{{route('logout.get')}}">
+                    Log Out
+                </a>
             </div>
         </div>
         <div class="user-main">

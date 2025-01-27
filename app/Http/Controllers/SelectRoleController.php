@@ -23,6 +23,7 @@ class SelectRoleController extends Controller
         $user->medicalStaff->update([
             "status"=>true,
         ]);
+        return redirect()->route("medicalStaff.saveID.index");
     }
 
     public function caretaker(Request $request){

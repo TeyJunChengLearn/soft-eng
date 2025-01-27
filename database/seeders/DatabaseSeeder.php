@@ -33,5 +33,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SanctuaryTaskSeeder::class);
         $this->call(SupplyRequestSeeder::class);
         $this->call(FeedbackSeeder::class);
+        $this->call(VetIDGeneratorSeeder::class);
+        $this->call(UserStatusUpdateSeeder::class);
     }
 }

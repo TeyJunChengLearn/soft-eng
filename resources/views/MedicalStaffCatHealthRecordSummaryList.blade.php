@@ -16,10 +16,13 @@
                 </div>
                 <!-- with create searchbar container -->
                 <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-                    <a href="#" class="btn btn-dark">Create</a>
+                    <a href="{{route('medicalStaff.healthRecord.add.index',['catID'=>$catID])}}" class="btn btn-dark">Create</a>
                 </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable summary-table">
+                    @if($catHealthRecords->isEmpty())
+                        <p> There are no any health record for this cat</P>
+                        @else
+                        <table class="user-main-content-6rowtable summary-table">
                         <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Recorded Date
@@ -31,105 +34,31 @@
                                 Activity
                             </th>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
+                        @foreach ($catHealthRecords as $catHealthRecord)
+                            <tr class="user-main-content-6rowtable-tabledata"  >
                             <td>
-                                Table Data
+                                {{$catHealthRecord->datetime}}
                             </td>
                             <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
+                                {{$catHealthRecord->summary}}
                             </td>
                             <td>
                                 <a href="link1.html">
-                                    Select
+                                    view
                                 </a>
                             </td>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <a href="link1.html">
-                                    Select
-                                </a>
-                            </td>
-                        </tr>
-
+                        @endforeach
 
                     </table>
+                    @endif
+
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">
-                    <nav role="navigation" aria-label="Pagination Navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled" aria-disabled="true">
-                                <span class="page-link">Previous</span>
-                            </li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" rel="next">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @if(!$catHealthRecords->isEmpty())
+                        {{$catHealthRecords->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+                    @endif
                 </div>
             </div>
         @endsection

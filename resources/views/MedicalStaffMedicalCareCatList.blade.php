@@ -15,442 +15,60 @@
         </form>
     </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable manager-cat-records">
-            <tr class="user-main-content-21rowtable-tablehead">
-                <th>
-                    Name
-                </th>
-                <th>
-                    Breed
-                </th>
-                <th>
-                    Gender
-                </th>
-                <th>
-                    Birthdate
-                </th>
-                <th>
-                    Action
-                </th>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Muhammad Haziq bin Abdullah Kamaluddin
-                </td>
-                <td>
-                    British Shorthair
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    01/09/2022
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <a href="link1.html">
-                        Select
-                    </a>
-                </td>
-            </tr>
+        @if ($cats->isEmpty())
+            <p>There are no any cats in this Sanctuary</p>
+            @else
+            <table class="user-main-content-21rowtable manager-cat-records">
+                <tr class="user-main-content-21rowtable-tablehead">
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Breed
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Birthdate
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            @foreach($cats as $key => $cat)
+                <tr class="user-main-content-21rowtable-tabledata"  >
+                    <td>
+                        {{$cat->name}}
+                    </td>
+                    <td>
+                        {{$cat->breed}}
+                    </td>
+                    <td>
+                        @if ($cat->gender==false)
+                        Female
+                        @else
+                        Male
+                        @endif
+                    </td>
+                    <td>
+                        {{$cat->birthdate}}
+                    </td>
+                    <td>
+                        <a href="{{route('medicalStaff.medicalCare.summaryList',['catID'=>$cat->id])}}">
+                            Select
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
         </table>
+        @endif
 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
         <div class="d-flex justify-content-center">
-        <nav role="navigation" aria-label="Pagination Navigation">
-            <ul class="pagination">
-                <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" rel="next">Next</a>
-                </li>
-            </ul>
-        </nav>
+            @if(!$cats->isEmpty())
+            {{$cats->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+        @endif
     </div>
 </div>
 

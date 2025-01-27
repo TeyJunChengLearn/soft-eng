@@ -26,9 +26,13 @@ class LoginController extends Controller
 
             if($user->manager->status==false && $user->medicalStaff->status==false && $user->admin->status==false&&$user->caretaker->status==false){
                 return redirect()->route("selectRole.index");
+            }else if($user->medicalStaff->status==true){
+                return redirect()->route('medicalStaff.healthRecord.sanctuaryList');
+            }else if($user->caretaker->status==true){
+                return redirect()->route('caretaker.catActivity.sanctuaryList');
             }
-        }
 
         return back()->withErrors(["invalid credentials"]);
+        }
     }
 }
