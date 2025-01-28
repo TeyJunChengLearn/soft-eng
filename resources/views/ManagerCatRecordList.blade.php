@@ -16,445 +16,65 @@
     </div>
     <!-- with create searchbar container -->
     <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-        <a href="#" class="btn btn-dark">Create</a>
+        <a href="{{route('manager.catRecord.sanctuaryList.add')}}" class="btn btn-dark">Create</a>
     </div>
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable manager-cat-records">
-            <tr class="user-main-content-21rowtable-tablehead">
-                <th>
-                    Name
-                </th>
-                <th>
-                    Breed
-                </th>
-                <th>
-                    Gender
-                </th>
-                <th>
-                    Birthdate
-                </th>
-                <th>
-                    Action
-                </th>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Muhammad Haziq bin Abdullah Kamaluddin
-                </td>
-                <td>
-                    British Shorthair
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    01/09/2022
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-        </table>
+        @if ($cats->isEmpty())
+            <p>No Cat Records Found.</p>
+            @else
+            <table class="user-main-content-21rowtable manager-cat-records">
+                <tr class="user-main-content-21rowtable-tablehead">
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Breed
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Birthdate
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+                @foreach($cats as $cat)
+                <tr class="user-main-content-21rowtable-tabledata"  >
+                    <td>
+                        {{$cat->name}}
+                    </td>
+                    <td>
+                        {{$cat->breed}}
+                    </td>
+                    <td>
+                        @if ($cat->gender==false)
+                        Female
+                        @else
+                        Male
+                        @endif
+                    </td>
+                    <td>
+                        {{$cat->birthdate}}
+                    </td>
+                    <td>
+                        <a href="{{route('manager.catRecord.view',['sanctuaryID'=>$sanctuaryID,'catID'=>$cat->id])}}"><i class="bi bi-eye fs-5"></i></a>
+                        <a href="{{route('manager.catRecord.edit.index',['sanctuaryID'=>$sanctuaryID,'catID'=>$cat->id])}}"><i class="bi bi-pencil-square fs-5"></i></a>
+                        <a href="{{route('manager.catRecord.delete',['catID'=>$cat->id])}}"><i class="bi bi-trash3 fs-5"></i></a>
+                    </td>
+                </tr>
+                @endforeach
+
+            </table>
+        @endif
+
 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
         <div class="d-flex justify-content-center">
-        <nav role="navigation" aria-label="Pagination Navigation">
-            <ul class="pagination">
-                <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" rel="next">Next</a>
-                </li>
-            </ul>
-        </nav>
+            @if(!$cats->isEmpty())
+            {{$cats->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+        @endif
     </div>
 </div>
 

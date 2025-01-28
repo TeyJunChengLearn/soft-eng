@@ -1,21 +1,20 @@
-@extends('layouts.CaretakerTemplate')
+@extends('layouts.ManagerTemplate')
 
-@section('title',"Request Supplies (Sanctuary List)")
+@section('title',"Cat Records (Sanctuary List)")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Request Supplies (Sanctuary List)
+        Cat Records (Sanctuary List)
     </p>
 </div>
 <div class="user-main-content">
     <div class="user-main-content-searchbar-container-for-21rowtable">
         <form class="user-main-content-searchbar-form">
-                <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name='search'>
         </form>
     </div>
     <!-- with create searchbar container -->
-
     <div class="user-main-content-21rowtable-container">
         @if($sanctuaries->isEmpty())
             <p>There are no sanctuary for you to work</p>
@@ -41,12 +40,13 @@
                             {{$sanctuary->address}}
                         </td>
                         <td>
-                            <a href="{{route('caretaker.requestSupply.add.index',['sanctuaryID'=>$sanctuary->id])}}">
+                            <a href="{{route('manager.catRecord.add.index',['sanctuaryID'=>$sanctuary->id])}}">
                                 Select
                             </a>
                         </td>
                     </tr>
                 @endforeach
+
             </table>
         @endif
 </div>

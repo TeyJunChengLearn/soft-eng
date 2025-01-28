@@ -1,4 +1,4 @@
-@extends('layouts.ManagerTemplate')
+@extends('layouts.CaretakerTemplate')
 
 @section('title',"Request Supplies")
 
@@ -11,15 +11,18 @@
             <div class="user-main-content">
                 <div class="user-main-content-searchbar-container-for-21rowtable">
                     <form class="user-main-content-searchbar-form">
-                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name="search">
                     </form>
                 </div>
                 <!-- with create searchbar container -->
                 <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-                    <a href="#" class="btn btn-dark">Create</a>
+                    <a href="{{route('caretaker.requestSupply.sanctuaryList')}}" class="btn btn-dark">Create</a>
                 </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable ">
+                    @if ($supplyRequests->isEmpty())
+                        <p>There are no any request</p>
+                        @else
+                        <table class="user-main-content-6rowtable ">
                         <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Item Name
@@ -34,111 +37,31 @@
                                 Qty
                             </th>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                        </tr>
-
+                        @foreach($supplyRequests as $supplyRequest)
+                            <tr class="user-main-content-6rowtable-tabledata"  >
+                                <td>
+                                    {{$supplyRequest->item_name}}
+                                </td>
+                                <td>
+                                    {{$supplyRequest->sanctuary->name}}
+                                </td>
+                                <td>
+                                    {{$supplyRequest->created_at}}
+                                </td>
+                                <td>
+                                    {{$supplyRequest->quantity}}
+                                </td>
+                            </tr>
+                        @endforeach
 
                     </table>
+                    @endif
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">
-                    <nav role="navigation" aria-label="Pagination Navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled" aria-disabled="true">
-                                <span class="page-link">Previous</span>
-                            </li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" rel="next">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @if (!$supplyRequests->isEmpty())
+                    {{$supplyRequests->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+                    @endif
                 </div>
             </div>
         @endsection

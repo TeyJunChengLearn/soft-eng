@@ -9,54 +9,57 @@
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form">
-
+    <form class="user-main-content-standardform-form" method="POST" action="{{route('manager.catRecord.edit.post',['sanctuaryID'=>$sanctuaryID,'catID'=>$catID])}}">
+        @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" name="name" value="{{$cat->name}}" required>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="date" class="user-main-content-standardform-form-input" name="birthdate" value="{{$cat->birthdate}}" required>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" name="breed" value="{{$cat->breed}}" required >
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <select type="text" class="user-main-content-standardform-form-input" name="gender" required>
+                            <option value="true" @if($cat->gender == true) selected @endif>Male</option>
+                            <option value="false" @if($cat->gender == false) selected @endif>Female</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">General Story</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);"></textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="general_story" required>{{$cat->general_story}}</textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('manager.catRecord.List',['sanctuaryID'=>$sanctuaryID])}}" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
-                Edit
-                </a>
+                <button type="submit" class="user-main-content-standardform-button">
+                Confirm
+                </button>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('manager.catRecord.view',['sanctuaryID'=>$sanctuaryID,'catID'=>$catID])}}" class="user-main-content-standardform-button">
                 View
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('manager.catRecord.delete',['catID'=>$catID])}}" class="user-main-content-standardform-button">
                 Delete
                 </a>
             </div>

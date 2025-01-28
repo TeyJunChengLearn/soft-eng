@@ -1,15 +1,15 @@
-@extends('layouts.MedicalStaffTemplate')
+@extends('layouts.CaretakerTemplate')
 
-@section('title',"Request Join Group")
+@section('title',"Join Manager")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Request Join Group
+        Join Manager
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form" method="POST" action="{{route("medicalstaff.joinGroup.post")}}">
+    <form class="user-main-content-standardform-form" method="POST" action="{{route("caretaker.joinManager.post")}}">
         @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
@@ -17,12 +17,7 @@
                     <div class="user-main-content-standardform-form-column">
                         <h2 style="color: white;">How do I join?</h2>
                         <br>
-                        <h3 style="color: white;">Once you meet the manager, they will provide you with an ID. Simply copy and paste the ID to send a request. Your request will be accepted once the manager approves it.@if (session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
-                        @endif
-
+                        <h3 style="color: white;">Once you meet the manager, they will provide you with an ID. Simply copy and paste the ID to join the manager.
                         </h3>
                     </div>
                 </div>

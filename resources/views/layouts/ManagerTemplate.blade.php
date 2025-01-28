@@ -16,13 +16,13 @@
             <div class="user-sidebar-top-container">
                     <img src="/assets/cat database logo.jpg" class="user-sidebar-logo">
                 <div class="user-sidebar-list">
-                    <a href="#">
-                        <div class="user-sidebar-list-item-{{ Request::is('cat-records') ? 'selected' : 'notselected' }}">
+                    <a href="{{route('manager.catRecord.sanctuaryList')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='catRecords') ? 'selected' : 'notselected' }}">
                             Cat Records
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.caretaker.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='caretakerRecords') ? 'selected' : 'notselected' }}">
                             Caretaker Records
                         </div>
                     </a>

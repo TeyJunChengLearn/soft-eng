@@ -1,6 +1,6 @@
 @extends('layouts.CaretakerTemplate')
 
-@section('title',"Adoptions (Sanctuary List)")
+@section('title',"Add Adoptions (Sanctuary List)")
 
 @section('content')
 <div class="user-main-pagetitle-container">
@@ -15,9 +15,6 @@
         </form>
     </div>
     <!-- with create searchbar container -->
-    <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-        <a href="{{route('caretaker.adoptions.add.sanctuaryList')}}" class="btn btn-dark">Create</a>
-    </div>
     <div class="user-main-content-21rowtable-container">
         @if($sanctuaries->isEmpty())
         <p>There are no sanctuary for you to work</p>
@@ -43,7 +40,7 @@
                         {{$sanctuary->address}}
                     </td>
                     <td>
-                        <a href="{{route('caretaker.adoptions.catList',['sanctuaryID'=>$sanctuary->id])}}">
+                        <a href="{{route('caretaker.adoptions.add.catList',['sanctuaryID'=>$sanctuary->id])}}">
                             Select
                         </a>
                     </td>

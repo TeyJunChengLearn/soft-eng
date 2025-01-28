@@ -1,6 +1,6 @@
 @extends('layouts.CaretakerTemplate')
 
-@section('title',"Adoptions (Cat List)")
+@section('title',"Add Adoptions (Cat List)")
 
 @section('content')
 <div class="user-main-pagetitle-container">
@@ -14,13 +14,10 @@
                 <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name="search">
         </form>
     </div>
-    <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-        <a href="{{route('caretaker.adoptions.add.sanctuaryList')}}" class="btn btn-dark">Create</a>
-    </div>
     <!-- with create searchbar container -->
     <div class="user-main-content-21rowtable-container">
         @if ($cats->isEmpty())
-        <p>There are no any cats for adoption in this Sanctuary</p>
+        <p>There are no any cats for you to adoption in this Sanctuary</p>
         @else
         <table class="user-main-content-21rowtable manager-cat-records">
             <tr class="user-main-content-21rowtable-tablehead">
@@ -59,7 +56,7 @@
                     {{$cat->birthdate}}
                 </td>
                 <td>
-                    <a href="{{route('caretaker.adoptions.remove',['catID'=>$cat->id,'sanctuaryID'=>$sanctuaryID])}}"><i class="bi bi-x-square fs-3"></i></a>
+                    <a href="{{route('caretaker.adoptions.add',['catID'=>$cat->id,'sanctuaryID'=>$sanctuaryID])}}">Select</a>
                 </td>
             </tr>
         @endforeach

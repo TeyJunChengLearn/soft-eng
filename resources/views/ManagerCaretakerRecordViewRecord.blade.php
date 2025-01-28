@@ -13,56 +13,42 @@
         <div class="usermain-content-standardform-form-input-container">
             <div class="user-main-content-standardform-form-row">
                 <div class="user-main-content-standardform-form-column">
-                    <label class="user-main-content-standardform-form-label">Label 1:</label>
+                    <label class="user-main-content-standardform-form-label">Username:</label>
                     <div type="text" class="user-main-content-standardform-form-input" >
-                        asdasdasd
+                        {{$caretaker->user->username}}
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-column">
-                    <label class="user-main-content-standardform-form-label">Label 1:</label>
+                    <label class="user-main-content-standardform-form-label">Created Date:</label>
                     <div type="text" class="user-main-content-standardform-form-input">
-                        asdasdasdas
+                        {{$caretaker->user->created_at}}
                     </div>
                 </div>
             </div>
 
             <div class="user-main-content-standardform-form-row">
                 <div class="user-main-content-standardform-form-column">
-                    <label class="user-main-content-standardform-form-label">Label 2:</label>
+                    <label class="user-main-content-standardform-form-label">Email:</label>
                     <div type="text" class="user-main-content-standardform-form-input" >
-                        asdasdas
+                        {{$caretaker->user->email}}
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-column">
-                    <label class="user-main-content-standardform-form-label">Label 2:</label>
+                    <label class="user-main-content-standardform-form-label">Last Updated:</label>
                     <div type="text" class="user-main-content-standardform-form-input" >
-                        asdasdas
-                    </div>
-                </div>
-            </div>
-            <div class="user-main-content-standardform-form-row">
-                <div class="user-main-content-standardform-form-column">
-                    <label class="user-main-content-standardform-form-label">Label 2:</label>
-                    <div type="text" class="user-main-content-standardform-form-input" >
-                        asdasdas
-                    </div>
-                </div>
-                <div class="user-main-content-standardform-form-column hidden">
-                    <label class="user-main-content-standardform-form-label">Label 2:</label>
-                    <div type="text" class="user-main-content-standardform-form-input" >
-                        asdasdas
+                        {{$caretaker->updated_at}}
                     </div>
                 </div>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('manager.caretaker.list')}}" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('manager.caretaker.remove',['caretakerID'=>$caretaker->id])}}" class="user-main-content-standardform-button">
                 Delete
                 </a>
             </div>

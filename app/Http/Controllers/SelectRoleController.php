@@ -16,6 +16,7 @@ class SelectRoleController extends Controller
         $user->manager->update([
             "status"=>true,
         ]);
+        return redirect()->route("manager.catRecord.sanctuaryList");
     }
 
     public function medicalStaff(Request $request){
@@ -31,5 +32,10 @@ class SelectRoleController extends Controller
         $user->caretaker->update([
             "status"=>true,
         ]);
+        if($user->caretaker->manager_id==null){
+            return redirect()->route('caretaker.joinManager.index');
+        }else{
+            return redirect()->route('caretaker.adoptions.sanctuaryList');
+        }
     }
 }

@@ -15,28 +15,36 @@
         <div class="user-sidebar">
             <div class="user-sidebar-top-container">
                     <img src="/assets/cat database logo.jpg" class="user-sidebar-logo">
-                <div class="user-sidebar-list">
+                @php
+                    use Illuminate\Support\Facades\Auth;
+
+                    $user = Auth::user();
+                @endphp
+                @if ($user->caretaker->manager_id!=null)
+                    <div class="user-sidebar-list">
                     <a href="{{route('caretaker.catActivity.sanctuaryList')}}">
                         <div class="user-sidebar-list-item-{{ ($page=='catActivity') ? 'selected' : 'notselected' }}">
                             Cats' Activity
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('caretaker.sanctuaryTask.sanctuaryList')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='sanctuaryTask') ? 'selected' : 'notselected' }}">
                             Sanctuary Task
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('caretaker.adoptions.sanctuaryList')}}">
+                        <div class="user-sidebar-list-item-{{($page=='adoptions') ? 'selected' : 'notselected' }}">
                             Adoptions
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('caretaker.requestSupply.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='requestSupplies') ? 'selected' : 'notselected' }}">
                             Request Supplies
                         </div>
                     </a>
                 </div>
+                @endif
+
             </div>
             <div class="user-sidebar-logout">
                 <a href="{{route('logout.get')}}">

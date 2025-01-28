@@ -1,17 +1,17 @@
 @extends('layouts.CaretakerTemplate')
 
-@section('title',"Request Supplies (Sanctuary List)")
+@section('title',"Sanctuary Task (Sanctuary List)")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Request Supplies (Sanctuary List)
+        Cats' Activity (Sanctuary List)
     </p>
 </div>
 <div class="user-main-content">
     <div class="user-main-content-searchbar-container-for-21rowtable">
         <form class="user-main-content-searchbar-form">
-                <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name='search'>
         </form>
     </div>
     <!-- with create searchbar container -->
@@ -41,12 +41,13 @@
                             {{$sanctuary->address}}
                         </td>
                         <td>
-                            <a href="{{route('caretaker.requestSupply.add.index',['sanctuaryID'=>$sanctuary->id])}}">
+                            <a href="{{route('caretaker.sanctuaryTask.list',['sanctuaryID'=>$sanctuary->id])}}">
                                 Select
                             </a>
                         </td>
                     </tr>
                 @endforeach
+
             </table>
         @endif
 </div>

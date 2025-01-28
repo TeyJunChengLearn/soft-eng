@@ -29,7 +29,12 @@ class LoginController extends Controller
             }else if($user->medicalStaff->status==true){
                 return redirect()->route('medicalStaff.healthRecord.sanctuaryList');
             }else if($user->caretaker->status==true){
+                if($user->caretaker->manager_id==null){
+                    return redirect()->route('caretaker.joinManager.index');
+                }
                 return redirect()->route('caretaker.catActivity.sanctuaryList');
+            }else if($user->manager->status==true){
+                return redirect()->route('manager.catRecord.sanctuaryList');
             }
 
         return back()->withErrors(["invalid credentials"]);

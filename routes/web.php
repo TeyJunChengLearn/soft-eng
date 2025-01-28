@@ -9,29 +9,52 @@ use App\Http\Controllers\SelectRoleController;
 use App\Http\Controllers\InterfaceUseController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\MedicalStaffSaveIDController;
+use App\Http\Controllers\ManagerCatRecordAddController;
+use App\Http\Controllers\CaretakerJoinManagerController;
+use App\Http\Controllers\ManagerCatRecordEditController;
+use App\Http\Controllers\ManagerCatRecordListController;
+use App\Http\Controllers\ManagerCatRecordViewController;
 use App\Http\Controllers\MedicalStaffJoinGroupController;
+use App\Http\Controllers\ManagerCatRecordDeleteController;
 use App\Http\Controllers\CaretakerCatActivityAddController;
+use App\Http\Controllers\CaretakerAdoptionsDeleteController;
 use App\Http\Controllers\MedicalStaffTreatmentAddController;
+use App\Http\Controllers\CaretakerAdoptionsCatListController;
 use App\Http\Controllers\MedicalStaffTreatmentListController;
+use App\Http\Controllers\CaretakerSanctuaryTaskListController;
+use App\Http\Controllers\CaretakerSanctuaryTaskViewController;
+use App\Http\Controllers\ManagerCaretakerRecordListController;
+use App\Http\Controllers\ManagerCaretakerRecordViewController;
 use App\Http\Controllers\MedicalStaffAppointmentAddController;
 use App\Http\Controllers\MedicalStaffMedicalCareAddController;
 use App\Http\Controllers\CaretakerCatActivityCatListController;
+use App\Http\Controllers\CaretakerRequestSuppliesAddController;
 use App\Http\Controllers\MedicalStaffAppointmentListController;
 use App\Http\Controllers\MedicalStaffHealthRecordAddController;
 use App\Http\Controllers\MedicalStaffMedicalCareListController;
+use App\Http\Controllers\CaretakerAdoptionsAddCatListController;
+use App\Http\Controllers\CaretakerRequestSuppliesListController;
+use App\Http\Controllers\ManagerCaretakerRecordRemoveController;
 use App\Http\Controllers\MedicalStaffTreatmentCatListController;
+use App\Http\Controllers\ManagerCatRecordSanctuaryListController;
 use App\Http\Controllers\MedicalStaffAppointmentRemoveController;
 use App\Http\Controllers\MedicalStaffAppointmentCatListController;
 use App\Http\Controllers\MedicalStaffMedicalCareCatListController;
+use App\Http\Controllers\CaretakerAdoptionsSanctuaryListController;
 use App\Http\Controllers\CaretakerCatActivitySummaryListController;
 use App\Http\Controllers\MedicalStaffHealthRecordCatListController;
+use App\Http\Controllers\ManagerCatRecordAddSanctuaryListController;
 use App\Http\Controllers\MedicalStaffTreatmentSummaryListController;
 use App\Http\Controllers\CaretakerCatActivitySanctuaryListController;
+use App\Http\Controllers\CaretakerAdoptionsAddSanctuaryListController;
+use App\Http\Controllers\CaretakerSanctuaryTaskSanctuaryAddController;
 use App\Http\Controllers\MedicalStaffMedicalCareSummaryListController;
 use App\Http\Controllers\MedicalStaffTreatmentSanctuaryListController;
+use App\Http\Controllers\CaretakerSanctuaryTaskSanctuaryListController;
 use App\Http\Controllers\MedicalStaffHealthRecordSummaryListController;
 use App\Http\Controllers\MedicalStaffAppointmentSanctuaryListController;
 use App\Http\Controllers\MedicalStaffMedicalCareSanctuaryListController;
+use App\Http\Controllers\CaretakerRequestSuppliesSanctuaryListController;
 use App\Http\Controllers\MedicalStaffHealthRecordSanctuaryListController;
 
 Route::get('/design', [InterfaceUseController::class,'index']);
@@ -117,6 +140,46 @@ Route::get('/caretaker/catActivity/catList/{sanctuaryID}',[CaretakerCatActivityC
 Route::get('/caretaker/catActivity/summaryList/{catID}',[CaretakerCatActivitySummaryListController::class,'index'])->name('caretaker.catActivity.summaryList');
 Route::get('/caretaker/catActivity/add/{catID}',[CaretakerCatActivityAddController::class,'index'])->name('caretaker.catActivity.add.index');
 Route::post('/caretaker/catActivity/add/{catID}',[CaretakerCatActivityAddController::class,'add'])->name('caretaker.catActivity.add.post');
+//sanctuary task
+Route::get('/caretaker/sanctuaryTask/sanctuaryList',[CaretakerSanctuaryTaskSanctuaryListController::class,'index'])->name('caretaker.sanctuaryTask.sanctuaryList');
+Route::get('/caretaker/sanctuaryTask/list/{sanctuaryID}',[CaretakerSanctuaryTaskListController::class,'index'])->name('caretaker.sanctuaryTask.list');
+Route::get('/caretaker/sanctuaryTask/{sanctuaryID}/add',[CaretakerSanctuaryTaskSanctuaryAddController::class,'index'])->name('caretaker.sanctuaryTask.add.index');
+Route::post('/caretaker/sanctuaryTask/{sanctuaryID}/add',[CaretakerSanctuaryTaskSanctuaryAddController::class,'add'])->name('caretaker.sanctuaryTask.add.post');
+Route::get('/caretaker/sanctuaryTask/{sanctuaryID}/view/{sanctuaryTaskID}',[CaretakerSanctuaryTaskViewController::class,'index'])->name('caretaker.sanctuaryTask.view');
+
+//adoptions
+Route::get('/caretaker/adoptions/sanctuaryList',[CaretakerAdoptionsSanctuaryListController::class,'index'])->name('caretaker.adoptions.sanctuaryList');
+Route::get('/caretaker/adoptions/catList/{sanctuaryID}',[CaretakerAdoptionsCatListController::class,'index'])->name('caretaker.adoptions.catList');
+Route::get('/caretaker/adoptions/catList/remove/{sanctuaryID}/{catID}',[CaretakerAdoptionsDeleteController::class,'delete'])->name('caretaker.adoptions.remove');
+Route::get('/caretaker/adoptions/SanctuaryList/add/sanctuaryList',[CaretakerAdoptionsAddSanctuaryListController::class,'index'])->name('caretaker.adoptions.add.sanctuaryList');
+Route::get('/caretaker/adoptions/SanctuaryList/add/catList/{sanctuaryID}',[CaretakerAdoptionsAddCatListController::class,'index'])->name('caretaker.adoptions.add.catList');
+Route::get('/caretaker/adoptions/catList/add/{sanctuaryID}/{catID}',[CaretakerAdoptionsAddCatListController::class,'add'])->name('caretaker.adoptions.add');
+// request supplies
+Route::get('/caretaker/requestSupply/list',[CaretakerRequestSuppliesListController::class,'index'])->name('caretaker.requestSupply.list');
+Route::get("/caretaker/requestSupply/sanctuaryList",[CaretakerRequestSuppliesSanctuaryListController::class,"index"])->name("caretaker.requestSupply.sanctuaryList");
+Route::get("/caretaker/requestSupply/add/{sanctuaryID}",[CaretakerRequestSuppliesAddController::class,"index"])->name("caretaker.requestSupply.add.index");
+Route::post("/caretaker/requestSupply/add/{sanctuaryID}",[CaretakerRequestSuppliesAddController::class,"add"])->name("caretaker.requestSupply.add.post");
+// join manager
+Route::get('/caretaker/joinManager/',[CaretakerJoinManagerController::class,'index'])->name('caretaker.joinManager.index');
+Route::post('/caretaker/joinManager/',[CaretakerJoinManagerController::class,'join'])->name('caretaker.joinManager.post');
+
+//manager
+// cat record
+Route::get("/manager/catRecord/sanctuaryList",[ManagerCatRecordSanctuaryListController::class,"index"])->name("manager.catRecord.sanctuaryList");
+Route::get("/manager/catRecord/List/{sanctuaryID}",[ManagerCatRecordListController::class,"index"])->name("manager.catRecord.List");
+Route::get("/manager/catRecord/add/sanctuaryList",[ManagerCatRecordAddSanctuaryListController::class,"index"])->name("manager.catRecord.sanctuaryList.add");
+Route::get("/manager/catRecord/add/{sanctuaryID}",[ManagerCatRecordAddController::class,"index"])->name("manager.catRecord.add.index");
+Route::post("/manager/catRecord/add/{sanctuaryID}",[ManagerCatRecordAddController::class,"add"])->name("manager.catRecord.add.post");
+Route::get("/manager/catRecord/view/{catID}/{sanctuaryID}",[ManagerCatRecordViewController::class,"index"])->name("manager.catRecord.view");
+Route::get("/manager/catRecord/edit/{catID}/{sanctuaryID}",[ManagerCatRecordEditController::class,"index"])->name("manager.catRecord.edit.index");
+Route::post("/manager/catRecord/edit/{catID}/{sanctuaryID}",[ManagerCatRecordEditController::class,"edit"])->name("manager.catRecord.edit.post");
+Route::get("/manager/catRecord/delete/{catID}",[ManagerCatRecordDeleteController::class,"delete"])->name("manager.catRecord.delete");
+
+//caretaker record
+Route::get('/manager/caretaker/List',[ManagerCaretakerRecordListController::class,'index'])->name("manager.caretaker.list");
+Route::get('/manager/caretaker/view/{caretakerID}',[ManagerCaretakerRecordViewController::class,'index'])->name('manager.caretaker.view');
+Route::get('/manager/caretaker/remove/{caretakerID}',[ManagerCaretakerRecordRemoveController::class,'remove'])->name('manager.caretaker.remove');
+
 
 
 

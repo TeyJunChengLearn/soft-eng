@@ -9,22 +9,22 @@
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form">
-
+    <form class="user-main-content-standardform-form" action="{{route('caretaker.sanctuaryTask.add.post',['sanctuaryID'=>$sanctuaryID])}}" method="POST">
+        @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
 
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">Summary</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);"></textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name='summary'></textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <button type='submit' class="user-main-content-standardform-button">
                 Confirm
-                </a>
+                </button>
             </div>
         </div>
     </form>
