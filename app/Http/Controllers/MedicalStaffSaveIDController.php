@@ -13,10 +13,12 @@ class MedicalStaffSaveIDController extends Controller
     }
 
     public function saveID(request $request){
-        dd($request->all());
+        // dd($request->all());
         $medicalStaff=MedicalStaff::where('user_id',Auth::id())->first();
         $medicalStaff->update([
             'vet_id'=>$request->vet_id,
         ]);
+
+        return redirect()->route('medicalStaff.healthRecord.sanctuaryList');
     }
 }

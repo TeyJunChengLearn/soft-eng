@@ -13,11 +13,7 @@
             <img src="assets/cat database logo.jpg" class="createaccount-image"/>
             <form class="createaccount-form-layout" action="{{route("register.post")}}" method="POST">
                 @csrf
-                @if($errors->any())
-                @foreach($errors->all() as $error)
-                    <p class="error-return">{{$error}}</p>
-                @endforeach
-                @endif
+
                 <input type="text" placeholder="Username" class="createaccount-form-username-input" name="username"/>
                 <input type="email" placeholder="Email" class="createaccount-form-email-input"/ name="email">
                 <input type="password" placeholder="Password" class="createaccount-form-password-input" name="password"/>

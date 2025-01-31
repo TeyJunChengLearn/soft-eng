@@ -15,9 +15,12 @@
         </form>
     </div>
     <!-- with create searchbar container -->
-    
+
     <div class="user-main-content-21rowtable-container">
-        <table class="user-main-content-21rowtable manager-cat-records">
+        @if ($users->isEmpty())
+        <p>There are no users in the system</p>
+        @else
+            <table class="user-main-content-21rowtable manager-cat-records">
             <tr class="user-main-content-21rowtable-tablehead">
                 <th>
                     Email
@@ -35,424 +38,48 @@
                     Action
                 </th>
             </tr>
+            @foreach ($users as $user)
             <tr class="user-main-content-21rowtable-tabledata"  >
                 <td>
-                    Muhammad Haziq bin Abdullah Kamaluddin
+                    {{ $user->email }}
                 </td>
                 <td>
-                    British Shorthair
+                    {{$user->username}}
                 </td>
                 <td>
-                    Table Data
+                    @if ($user->admin->status==true)
+                     Admin
+                    @endif
+                    @if ($user->manager->status==true)
+                     Manager
+                    @endif
+                    @if ($user->medicalStaff->status==true)
+                     Medical Staff
+                    @endif
+                    @if ($user->caretaker->status==true)
+                     Caretaker
+                    @endif
                 </td>
                 <td>
-                    01/09/2022
+                    {{$user->updated_at}}
                 </td>
                 <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
+                    <a href="{{route("admin.manageUser.view",['userID'=>$user->id])}}"><i class="bi bi-eye fs-5"></i></a>
+                    <a href="{{route('admin.manageUser.edit.index',['userID'=>$user->id])}}"><i class="bi bi-pencil-square fs-5"></i></a>
                 </td>
             </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
-            <tr class="user-main-content-21rowtable-tabledata"  >
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    Table Data
-                </td>
-                <td>
-                    <i class="bi bi-eye fs-5"></i>
-                    <i class="bi bi-pencil-square fs-5"></i>
-                    <i class="bi bi-trash3 fs-5"></i>
-                </td>
-            </tr>
+
+            @endforeach
+
         </table>
+        @endif
+
 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
         <div class="d-flex justify-content-center">
-        <nav role="navigation" aria-label="Pagination Navigation">
-            <ul class="pagination">
-                <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" rel="next">Next</a>
-                </li>
-            </ul>
-        </nav>
+        @if (!$users->isEmpty())
+          {{$users->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+        @endif
     </div>
 </div>
 

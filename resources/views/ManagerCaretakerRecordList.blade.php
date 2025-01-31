@@ -11,17 +11,14 @@
 <div class="user-main-content">
     <div class="user-main-content-searchbar-container-for-21rowtable">
         <form class="user-main-content-searchbar-form">
-                <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name='search'>
         </form>
         <div class="user-main-content-searchbar-form">
-            <div class="user-main-content-searchbar-input">Manager ID</div>
+            <div class="user-main-content-searchbar-input">Manager ID: {{$user->manager->id}}</div>
         </div>
 
     </div>
     <!-- with create searchbar container -->
-    <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
-        <a href="#" class="btn btn-dark">Create</a>
-    </div>
     <div class="user-main-content-21rowtable-container">
         @if ($caretakers->isEmpty())
             <p>There are no any caretaker work for you</P>

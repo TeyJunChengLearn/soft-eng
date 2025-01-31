@@ -26,38 +26,45 @@
                             Caretaker Records
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.verification.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='verification') ? 'selected' : 'notselected' }}">
                             Verification
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.manageSanctuary.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='manageSanctuary') ? 'selected' : 'notselected' }}">
                             Manage Sanctuary
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.catActivity.sanctuaryList')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='catActivity') ? 'selected' : 'notselected' }}">
                             Cats' Activity
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.supplyRequest.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='suppliesRequest') ? 'selected' : 'notselected' }}">
                             Supplies Request
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('manager.viewAnalytics')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='viewAnalytics') ? 'selected' : 'notselected' }}">
                             View Analytics
+                        </div>
+                    </a>
+                    <a href="{{route('manager.feedback')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='feedback') ? 'selected' : 'notselected' }}">
+                            Feedback
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="user-sidebar-logout">
+
                 <a href="{{route('logout.get')}}">
+                    <div class="user-sidebar-logout">
                     Log Out
+                    </div>
                 </a>
-            </div>
+
         </div>
         <div class="user-main">
             @yield('content')

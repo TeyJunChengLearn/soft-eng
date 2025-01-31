@@ -42,15 +42,20 @@
                             Request Supplies
                         </div>
                     </a>
+                    <a href="{{route("caretaker.feedback")}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='feedback') ? 'selected' : 'notselected' }}">
+                            Feedback
+                        </div>
+                    </a>
                 </div>
                 @endif
 
             </div>
-            <div class="user-sidebar-logout">
-                <a href="{{route('logout.get')}}">
-                    Log Out
-                </a>
-            </div>
+            <a href="{{route('logout.get')}}">
+                <div class="user-sidebar-logout">
+                Log Out
+                </div>
+            </a>
         </div>
         <div class="user-main">
             @yield('content')

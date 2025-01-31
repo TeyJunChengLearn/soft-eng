@@ -1,33 +1,33 @@
 @extends('layouts.ManagerTemplate')
 
-@section('title',"Edit Sanctuary")
+@section('title',"Add Sanctuary")
 
 @section('content')
 <div class="user-main-pagetitle-container">
     <p class="user-main-pagetitle-text">
-        Edit Sanctuary
+        Add Sanctuary
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form" method="Post" action="{{route('manager.manageSanctuary.edit.post',['sanctuaryID'=>$sanctuary->id])}}">
+    <form class="user-main-content-standardform-form" method="POST" action="{{route('manager.manageSanctuary.add.post')}}">
         @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Sanctuary Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" value="{{$sanctuary->name}}" required name="name">
+                        <input type="text" class="user-main-content-standardform-form-input" required name="name">
                     </div>
                 </div>
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">Sanctuary Address</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" required name="address">{{$sanctuary->address}}</textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" required name="address"></textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="{{route('manager.manageSanctuary.list')}}" class="user-main-content-standardform-button">
+                <a href="#" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>

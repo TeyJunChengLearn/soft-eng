@@ -1,29 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Middleware;
 
-use App\Models\User;
+use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Symfony\Component\HttpFoundation\Response;
 
-class LoginController extends Controller
+class NonUserOnly
 {
-    public function index(){
-        return view("BasicLogin");
-    }
-
-    public function login(Request $request){
-        $request->validate([
-            'email'=>"required|email",
-            'password'=>"required|string",
-        ]);
-
-        $user = User::where("email", $request->email)->first();
-
-        if($user && Hash::check($request->password, $user->password)){
-            Auth::login($user);
-
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        $user=Auth::user();
+        if (Auth::check()) {
             if($user->manager->status==false && $user->medicalStaff->status==false && $user->admin->status==false&&$user->caretaker->status==false){
                 return redirect()->route("selectRole.index");
             }else if($user->medicalStaff->status==true){
@@ -41,8 +35,7 @@ class LoginController extends Controller
             }else if($user->admin->status==true){
                 return redirect()->route('admin.dashboard');
             }
-
-        return back()->withErrors(["invalid credentials"]);
         }
+        return $next($request);
     }
 }

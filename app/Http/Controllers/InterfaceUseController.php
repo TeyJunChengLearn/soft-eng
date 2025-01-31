@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class InterfaceUseController extends Controller
 {
     public function index(Request $request){
-        return view("MedicalStaffCatHealthRecordSummaryList");
+        $page="";
+        return view("UserFeedback",compact("page"));
     }
 }

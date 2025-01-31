@@ -12,7 +12,10 @@
     <form class="user-main-content-standardform-form">
         <div class="user-main-content-6rowtable-container">
             <h4 style="color: white;">Latest Admin's Activity:</h4>
-            <table class="user-main-content-6rowtable activity-history-table">
+            @if ($adminActivityHistory==null)
+                <p>There are no any action from admin</p>
+                @else
+                <table class="user-main-content-6rowtable activity-history-table">
                 <tr class="user-main-content-6rowtable-tablehead">
                     <th>
                         Admin Name
@@ -29,28 +32,29 @@
                 </tr>
                 <tr class="user-main-content-6rowtable-tabledata"  >
                     <td>
-                        Table Data
+                        {{$adminActivityHistory->admin->user->username}}
                     </td>
                     <td>
-                        Table Data
+                        {{ $adminActivityHistory->details}}
                     </td>
                     <td>
-                        Table Data
+                        {{$adminActivityHistory->datetime}}
                     </td>
                     <td>
                         <i class="bi bi-eye fs-4"></i>
                     </td>
                 </tr>
             </table>
+            @endif
+
         </div>
         <div class="user-main-content-6rowtable-container">
             <h4 style="color: white;">Latest Feedback:</h4>
             <div class="user-main-content-standardform-form-row">
                 <div class="user-main-content-standardform-form-column">
                     <div class="user-main-content-Longform-form-textarea-container">
-                        <label class="user-main-content-standardform-form-label">Username</label>
-                        <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">blah blah blah
-                        </textarea>
+                        <label class="user-main-content-standardform-form-label">{{$feedback->user->username}}</label>
+                        <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">{{$feedback->details}}</textarea>
                     </div>
                 </div>
             </div>

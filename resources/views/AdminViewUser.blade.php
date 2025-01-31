@@ -16,36 +16,42 @@
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Username</label>
-                        <div type="text" class="user-main-content-standardform-form-input">Nicholas
-                        </div>
+                        <div type="text" class="user-main-content-standardform-form-input">{{$user->username}}</div>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Created Date</label>
-                        <div type="text" class="user-main-content-standardform-form-input">idfuckingknow
+                        <div type="text" class="user-main-content-standardform-form-input">{{$user->created_at}}
                         </div>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Email</label>
-                        <div type="text" class="user-main-content-standardform-form-input">Ragdoll
+                        <div type="text" class="user-main-content-standardform-form-input">{{$user->email}}
                         </div>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Last Updated</label>
-                        <div type="text" class="user-main-content-standardform-form-input">They/Them
+                        <div type="text" class="user-main-content-standardform-form-input">{{$user->updated_at}}
                         </div>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Role</label>
-                        <div type="text" class="user-main-content-standardform-form-input">Ragdoll
-                        </div>
-                    </div>
-                    <div class="user-main-content-standardform-form-column hidden">
-                        <label class="user-main-content-standardform-form-label">Gender</label>
-                        <div type="text" class="user-main-content-standardform-form-input">They/Them
+                        <div type="text" class="user-main-content-standardform-form-input">
+                            @if ($user->admin->status==true)
+                            Admin
+                           @endif
+                           @if ($user->manager->status==true)
+                            Manager
+                           @endif
+                           @if ($user->medicalStaff->status==true)
+                            Medical Staff
+                           @endif
+                           @if ($user->caretaker->status==true)
+                            Caretaker
+                           @endif
                         </div>
                     </div>
                 </div>
@@ -53,18 +59,13 @@
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('admin.manageUser.list')}}" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('admin.manageUser.edit.index',['userID'=>$user->id])}}" class="user-main-content-standardform-button">
                 Edit
-                </a>
-            </div>
-            <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
-                Delete
                 </a>
             </div>
         </div>

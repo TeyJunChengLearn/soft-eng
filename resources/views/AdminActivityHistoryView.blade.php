@@ -16,25 +16,24 @@
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Username</label>
-                        <div type="text" class="user-main-content-standardform-form-input">Nicholas
+                        <div type="text" class="user-main-content-standardform-form-input">{{$adminActivityHistory->admin->user->username}}
                         </div>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Created Date</label>
-                        <div type="text" class="user-main-content-standardform-form-input">idfuckingknow
+                        <div type="text" class="user-main-content-standardform-form-input">{{$adminActivityHistory->created_at}}
                         </div>
                     </div>
                 </div>
                 <div class="user-main-content-Longform-form-textarea-container">
                     <label class="user-main-content-standardform-form-label">Details</label>
-                    <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">they are very homeless. they do not have a mum or a dad. their parents dont want them
-                    </textarea>
+                    <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" readonly>{{$adminActivityHistory->details}}</textarea>
                 </div>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route("admin.activityHistory.list")}}" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>

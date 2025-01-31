@@ -13,22 +13,49 @@ class SelectRoleController extends Controller
 
     public function manager(Request $request){
         $user=Auth::user();
+        $user->admin->update([
+            "status"=>false,
+        ]);
         $user->manager->update([
             "status"=>true,
+        ]);
+        $user->medicalStaff->update([
+            "status"=>false,
+        ]);
+        $user->caretaker->update([
+            "status"=>false,
         ]);
         return redirect()->route("manager.catRecord.sanctuaryList");
     }
 
     public function medicalStaff(Request $request){
         $user=Auth::user();
+        $user->admin->update([
+            "status"=>false,
+        ]);
+        $user->manager->update([
+            "status"=>false,
+        ]);
         $user->medicalStaff->update([
             "status"=>true,
+        ]);
+        $user->caretaker->update([
+            "status"=>false,
         ]);
         return redirect()->route("medicalStaff.saveID.index");
     }
 
     public function caretaker(Request $request){
         $user=Auth::user();
+        $user->admin->update([
+            "status"=>false,
+        ]);
+        $user->manager->update([
+            "status"=>false,
+        ]);
+        $user->medicalStaff->update([
+            "status"=>false,
+        ]);
         $user->caretaker->update([
             "status"=>true,
         ]);

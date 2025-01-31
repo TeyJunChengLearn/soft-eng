@@ -16,38 +16,43 @@
             <div class="user-sidebar-top-container">
                     <img src="/assets/cat database logo.jpg" class="user-sidebar-logo">
                 <div class="user-sidebar-list">
-                    <a href="#">
-                        <div class="user-sidebar-list-item-{{ Request::is('cat-records') ? 'selected' : 'notselected' }}">
+                    <a href="{{route('admin.dashboard')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='dashboard') ? 'selected' : 'notselected' }}">
                             Dashboard
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('admin.manageUser.list')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='manageUsers') ? 'selected' : 'notselected' }}">
                             Manage Users
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-selected">
+                    <a href="{{route('admin.viewFeedback')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='feedbackView') ? 'selected' : 'notselected' }}">
                             Feedback
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route("admin.activityHistory.list")}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='adminActivityHistory') ? 'selected' : 'notselected' }}">
                             Admin's Activity History
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="user-sidebar-list-item-notselected">
+                    <a href="{{route('admin.settings.index')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='systemSettings') ? 'selected' : 'notselected' }}">
                             System Settings
+                        </div>
+                    </a>
+                    <a href="{{route("admin.feedback")}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='feedback') ? 'selected' : 'notselected' }}">
+                            Feedback
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="user-sidebar-logout">
-                <a href="{{route('logout.get')}}">
-                    Log Out
-                </a>
-            </div>
+            <a href="{{route('logout.get')}}">
+                <div class="user-sidebar-logout">
+                Log Out
+                </div>
+            </a>
         </div>
         <div class="user-main">
             @yield('content')

@@ -11,64 +11,35 @@
 <div class="user-main-content">
     <div class="user-main-content-searchbar-container-for-21rowtable">
         <form class="user-main-content-searchbar-form">
-                <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name="search">
         </form>
     </div>
     <br>
     <form class="user-main-content-standardform-form">
-        
-        <div class="user-main-content-6rowtable-container">
-            <div class="user-main-content-standardform-form-row">
-                <div class="user-main-content-standardform-form-column">
-                    <div class="user-main-content-Longform-form-textarea-container">
-                        <label class="user-main-content-standardform-form-label">Username</label>
-                        <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">blah blah blah
-                        </textarea>
+        @if ($feedbacks->isEmpty())
+            <p>no Feedback from the begin</p>
+            @else
+            @foreach ($feedbacks as $feedback)
+                <div class="user-main-content-6rowtable-container">
+                    <div class="user-main-content-standardform-form-row">
+                        <div class="user-main-content-standardform-form-column">
+                            <div class="user-main-content-Longform-form-textarea-container">
+                                <label class="user-main-content-standardform-form-label">{{$feedback->user->username}}</label>
+                                <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">{{$feedback->details}}</textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="user-main-content-6rowtable-container">
-            <div class="user-main-content-standardform-form-row">
-                <div class="user-main-content-standardform-form-column">
-                    <div class="user-main-content-Longform-form-textarea-container">
-                        <label class="user-main-content-standardform-form-label">Username</label>
-                        <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">blah blah blah
-                        </textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="user-main-content-6rowtable-container">
-            <div class="user-main-content-standardform-form-row">
-                <div class="user-main-content-standardform-form-column">
-                    <div class="user-main-content-Longform-form-textarea-container">
-                        <label class="user-main-content-standardform-form-label">Username</label>
-                        <textarea readonly id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);">blah blah blah
-                        </textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
+            @endforeach
+        @endif
+        <div class="d-flex justify-content-center">
+        @if (!$feedbacks->isEmpty())
+            {{$feedbacks->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+        @endif
+    </div>
     </form>
     <br>
-    <div class="d-flex justify-content-center">
-        <nav role="navigation" aria-label="Pagination Navigation">
-            <ul class="pagination">
-                <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" rel="next">Next</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+
 </div>
 <script>
     const textarea = document.getElementById('autoResizeTextarea');

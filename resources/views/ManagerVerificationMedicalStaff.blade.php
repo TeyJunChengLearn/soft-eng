@@ -14,13 +14,16 @@
                             <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
                     </form>
                     <div class="user-main-content-searchbar-form">
-                        <div class="user-main-content-searchbar-input">Manager ID</div>
+                        <div class="user-main-content-searchbar-input">Manager ID: {{$user->manager->id}}</div>
                     </div>
                 </div>
                 <!-- with create searchbar container -->
 
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable verification-medical-staff">
+                    @if ($verifications->isEmpty())
+                        <p>No verifications for now.</p>
+                        @else
+                        <table class="user-main-content-6rowtable verification-medical-staff">
                         <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Username
@@ -35,117 +38,33 @@
                                 Verification
                             </th>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-check-square fs-3"></i>
-                                <i class="bi bi-x-square fs-3"></i>
-                            </td>
-                        </tr>
-
+                        @foreach($verifications as $verification)
+                            <tr class="user-main-content-6rowtable-tabledata"  >
+                                <td>
+                                    {{$verification->medicalStaff->user->username}}
+                                </td>
+                                <td>
+                                    {{$verification->medicalStaff->user->email}}
+                                </td>
+                                <td>
+                                    {{$verification->medicalStaff->vet_id}}
+                                </td>
+                                <td>
+                                    <a href="{{route("manager.verification.approve",['verificationID'=>$verification->id])}}"><i class="bi bi-check-square fs-3"></i></a>
+                                    <a href="{{route('manager.verification.decline',['verificationID'=>$verification->id])}}"><i class="bi bi-x-square fs-3"></i></a>
+                                </td>
+                            </tr>
+                        @endforeach
 
                     </table>
+                    @endif
+
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">
-                    <nav role="navigation" aria-label="Pagination Navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled" aria-disabled="true">
-                                <span class="page-link">Previous</span>
-                            </li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" rel="next">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @if(!$verifications->isEmpty())
+                        {{$verifications->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+                    @endif
                 </div>
             </div>
         @endsection

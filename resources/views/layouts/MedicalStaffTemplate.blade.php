@@ -41,13 +41,18 @@
                             Request Join Group
                         </div>
                     </a>
+                    <a href="{{route('medicalStaff.feedback')}}">
+                        <div class="user-sidebar-list-item-{{ ($page=='feedback') ? 'selected' : 'notselected' }}">
+                            Feedback
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="user-sidebar-logout">
-                <a href="{{route('logout.get')}}">
-                    Log Out
-                </a>
-            </div>
+            <a href="{{route('logout.get')}}">
+                <div class="user-sidebar-logout">
+                Log Out
+                </div>
+            </a>
         </div>
         <div class="user-main">
             @yield('content')

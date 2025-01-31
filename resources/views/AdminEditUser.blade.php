@@ -9,38 +9,39 @@
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form">
-
+    <form class="user-main-content-standardform-form" method="POST" action="{{route("admin.manageUser.edit.post",['userID'=>$user->id])}}">
+        @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Username</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" name="username" value="{{$user->username}}">
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Created Date</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" value="{{$user->created_at}}" readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Email</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="email" class="user-main-content-standardform-form-input" name="email" value="{{$user->email}}">
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Last Updated</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" value="{{$user->updated_at}}" readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Role</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
-                    </div>
-                    <div class="user-main-content-standardform-form-column hidden">
-                        <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <select type="text" class="user-main-content-standardform-form-input" name="role">
+                            <option value="admin" @if($user->admin->status==true) selected @endif>Admin</option>
+                            <option value="manager" @if($user->manager->status==true) selected @endif>Manager</option>
+                            <option value="medicalStaff" @if($user->medicalStaff->status==true) selected @endif>Medical Staff</option>
+                            <option value="caretaker" @if($user->caretaker->status==true) selected @endif>Caretaker</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -52,18 +53,13 @@
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <button type="submit" class="user-main-content-standardform-button">
                 Confirm
                 </a>
             </div>
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route('admin.manageUser.view',['userID'=>$user->id])}}" class="user-main-content-standardform-button">
                 View
-                </a>
-            </div>
-            <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
-                Delete
                 </a>
             </div>
         </div>

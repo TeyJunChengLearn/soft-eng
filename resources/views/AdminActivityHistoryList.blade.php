@@ -9,19 +9,17 @@
                 </p>
             </div>
             <div class="user-main-content">
-                <div class="user-main-content-searchbar-container-for-21rowtable">
-                    <form class="user-main-content-searchbar-form">
-                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
-                    </form>
-                </div>
                 <div class="user-main-content-6rowtable-container">
-                    <table class="user-main-content-6rowtable activity-history-table">
+                    @if ($adminActivityHistories->isEmpty())
+                        <p>no any activity has performed</p>
+                        @else
+                        <table class="user-main-content-6rowtable activity-history-table">
                         <tr class="user-main-content-6rowtable-tablehead">
                             <th>
                                 Admin Name
                             </th>
                             <th>
-                                Type
+                                details
                             </th>
                             <th>
                                 Date
@@ -30,111 +28,32 @@
                                 Action
                             </th>
                         </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-                        <tr class="user-main-content-6rowtable-tabledata"  >
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                Table Data
-                            </td>
-                            <td>
-                                <i class="bi bi-eye fs-4"></i>
-                            </td>
-                        </tr>
-
+                        @foreach($adminActivityHistories as $adminActivityHistory)
+                            <tr class="user-main-content-6rowtable-tabledata"  >
+                                <td>
+                                    {{$adminActivityHistory->admin->user->username}}
+                                </td>
+                                <td>
+                                    {{$adminActivityHistory->details}}
+                                </td>
+                                <td>
+                                    {{$adminActivityHistory->datetime}}
+                                </td>
+                                <td>
+                                    <a href="{{route("admin.activityHistory.view",["adminActivityHistoryID"=>$adminActivityHistory->id])}}"><i class="bi bi-eye fs-4"></i></a>
+                                </td>
+                            </tr>
+                        @endforeach
 
                     </table>
+                    @endif
+
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">
-                    <nav role="navigation" aria-label="Pagination Navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled" aria-disabled="true">
-                                <span class="page-link">Previous</span>
-                            </li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" rel="next">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    @if(!$adminActivityHistories->isEmpty())
+                        {{$adminActivityHistories->withQueryString()->links('vendor.pagination.bootstrap-4')}}
+                    @endif
                 </div>
             </div>
         @endsection
