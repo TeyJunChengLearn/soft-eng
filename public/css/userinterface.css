@@ -374,30 +374,7 @@ textarea {
 }
 
 /* Specific max-widths for each column in manager-cat-records */
-.manager-cat-records th:nth-child(1),
-.manager-cat-records td:nth-child(1) {
-    max-width: 150px; /* Name column */
-}
 
-.manager-cat-records th:nth-child(2),
-.manager-cat-records td:nth-child(2) {
-    max-width: 120px; /* Breed column */
-}
-
-.manager-cat-records th:nth-child(3),
-.manager-cat-records td:nth-child(3) {
-    max-width: 80px; /* Gender column */
-}
-
-.manager-cat-records th:nth-child(4),
-.manager-cat-records td:nth-child(4) {
-    max-width: 120px; /* Birthdate column */
-}
-
-.manager-cat-records th:nth-child(5),
-.manager-cat-records td:nth-child(5) {
-    max-width: 100px; /* Action column */
-}
 .manager-cat-records td:nth-child(5) {
     text-align: center; /* Center align icons */
 }
@@ -408,15 +385,6 @@ textarea {
 }
 .verification-medical-staff td:nth-child(4) {
     text-align: center;
-}
-
-.summary-table th:nth-child(1),
-.summary-table td:nth-child(1) {
-    max-width: 50px; /* Name column */
-}
-.summary-table th:nth-child(3),
-.summary-table td:nth-child(3) {
-    max-width: 20px; /* Name column */
 }
 
 

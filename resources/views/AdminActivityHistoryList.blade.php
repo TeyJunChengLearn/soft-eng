@@ -19,7 +19,7 @@
                                 Admin Name
                             </th>
                             <th>
-                                details
+                                Details
                             </th>
                             <th>
                                 Date

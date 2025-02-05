@@ -22,7 +22,7 @@
                     @if($treatmentRecords->isEmpty())
                     <p> There are no any health record for this cat</P>
                     @else
-                    <table class="user-main-content-6rowtable summary-table">
+                    <table class="user-main-content-6rowtable">
                     <tr class="user-main-content-6rowtable-tablehead">
                         <th>
                             Summary
