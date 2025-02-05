@@ -41,7 +41,8 @@
                         {{$adminActivityHistory->datetime}}
                     </td>
                     <td>
-                        <i class="bi bi-eye fs-4"></i>
+                        <a href="{{route("admin.activityHistory.view",["adminActivityHistoryID"=>$adminActivityHistory->id])}}"><i class="bi bi-eye fs-4"></i></a>
+
                     </td>
                 </tr>
             </table>
