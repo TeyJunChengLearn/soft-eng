@@ -40,7 +40,7 @@
                                         {{$catActivity->summary}}
                                     </td>
                                     <td>
-                                        <a href="link1.html">
+                                        <a href="{{route("manager.catActivity.view",['catID'=>$catID,'catActivityID'=>$catActivity->id])}}">
                                             View
                                         </a>
                                     </td>

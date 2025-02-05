@@ -41,7 +41,7 @@
                         </td>
                         <td>
                             <a href="{{route('medicalStaff.treatment.List',['healthRecordID'=>$catHealthRecord->id])}}">
-                                view
+                                Select
                             </a>
                         </td>
                     </tr>

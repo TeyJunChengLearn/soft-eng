@@ -37,7 +37,7 @@
                             {{$treatmentRecord->summary}}
                         </td>
                         <td>
-                            <a href="link1.html">
+                            <a href="{{route("medicalStaff.treatment.view",['healthRecordID'=>$healthRecordID,'treatmentID'=>$treatmentRecord->id])}}">
                                 view
                             </a>
                         </td>

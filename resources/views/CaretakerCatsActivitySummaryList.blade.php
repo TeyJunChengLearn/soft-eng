@@ -43,7 +43,7 @@
                                         {{$catActivity->summary}}
                                     </td>
                                     <td>
-                                        <a href="link1.html">
+                                        <a href="{{route('caretaker.catActivity.view',["catID"=>$catID,"catActivityID"=>$catActivity])}}">
                                             View
                                         </a>
                                     </td>
@@ -52,7 +52,6 @@
 
                         </table>
                     @endif
-
                 </div>
                 <!-- Pagination from simple-bootstrap-5.blade -->
                  <div class="d-flex justify-content-center">

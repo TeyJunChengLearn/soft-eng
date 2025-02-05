@@ -24,17 +24,20 @@ use App\Http\Controllers\ManagerCatRecordViewController;
 use App\Http\Controllers\ManagerSupplyRequestController;
 use App\Http\Controllers\ManagerViewAnalyticsController;
 use App\Http\Controllers\MedicalStaffJoinGroupController;
+use App\Http\Controllers\ManagerCatActivityViewController;
 use App\Http\Controllers\ManagerCatRecordDeleteController;
 use App\Http\Controllers\CaretakerCatActivityAddController;
 use App\Http\Controllers\ManagerVerificationListController;
 use App\Http\Controllers\AdminActivityHistoryListController;
 use App\Http\Controllers\AdminActivityHistoryViewController;
 use App\Http\Controllers\CaretakerAdoptionsDeleteController;
+use App\Http\Controllers\CaretakerCatActivityViewController;
 use App\Http\Controllers\MedicalStaffTreatmentAddController;
 use App\Http\Controllers\CaretakerAdoptionsCatListController;
 use App\Http\Controllers\ManagerCatActivityCatListController;
 use App\Http\Controllers\ManagerManageSanctuaryAddController;
 use App\Http\Controllers\MedicalStaffTreatmentListController;
+use App\Http\Controllers\MedicalStaffTreatmentViewController;
 use App\Http\Controllers\CaretakerSanctuaryTaskListController;
 use App\Http\Controllers\CaretakerSanctuaryTaskViewController;
 use App\Http\Controllers\ManagerCaretakerRecordListController;
@@ -49,6 +52,7 @@ use App\Http\Controllers\ManagerVerificationApprovalController;
 use App\Http\Controllers\MedicalStaffAppointmentListController;
 use App\Http\Controllers\MedicalStaffHealthRecordAddController;
 use App\Http\Controllers\MedicalStaffMedicalCareListController;
+use App\Http\Controllers\MedicalStaffMedicalCareViewController;
 use App\Http\Controllers\CaretakerAdoptionsAddCatListController;
 use App\Http\Controllers\CaretakerRequestSuppliesListController;
 use App\Http\Controllers\ManagerCaretakerRecordRemoveController;
@@ -62,6 +66,7 @@ use App\Http\Controllers\MedicalStaffMedicalCareCatListController;
 use App\Http\Controllers\CaretakerAdoptionsSanctuaryListController;
 use App\Http\Controllers\CaretakerCatActivitySummaryListController;
 use App\Http\Controllers\ManagerCatActivitySanctuaryListController;
+use App\Http\Controllers\MedicalStaffCatHealthRecordViewController;
 use App\Http\Controllers\MedicalStaffHealthRecordCatListController;
 use App\Http\Controllers\ManagerCatRecordAddSanctuaryListController;
 use App\Http\Controllers\MedicalStaffTreatmentSummaryListController;
@@ -117,6 +122,7 @@ Route::middleware('user')->group(function () {
         Route::get('/medicalStaff/healthRecord/sanctuaryList',[MedicalStaffHealthRecordSanctuaryListController::class,'index'])->name('medicalStaff.healthRecord.sanctuaryList');
         Route::get('/medicalStaff/healthRecord/catList/{sanctuaryID}',[MedicalStaffHealthRecordCatListController::class,'index'])->name('medicalStaff.healthRecord.catList');
         Route::get('/medicalStaff/healthRecord/summaryList/{catID}',[MedicalStaffHealthRecordSummaryListController::class,'index'])->name('medicalStaff.healthRecord.summaryList');
+        Route::get('/medicalStaff/healthRecord/view/{catID}/{summaryID}',[MedicalStaffCatHealthRecordViewController::class,'index'])->name('medicalStaff.healthRecord.view');
         Route::get('/medicalStaff/healthRecord/summaryList/{catID}/add',[MedicalStaffHealthRecordAddController::class,'index'])->name('medicalStaff.healthRecord.add.index');
         Route::post('/medicalStaff/healthRecord/summaryList/{catID}/add',[MedicalStaffHealthRecordAddController::class,'add'])->name('medicalStaff.healthRecord.add.post');
         // treatment record
@@ -124,6 +130,7 @@ Route::middleware('user')->group(function () {
         Route::get('/medicalStaff/Treatment/catList/{sanctuaryID}',[MedicalStaffTreatmentCatListController::class,'index'])->name('medicalStaff.treatment.catList');
         Route::get('/medicalStaff/treatment/summaryList/{catID}',[MedicalStaffTreatmentSummaryListController::class,'index'])->name('medicalStaff.treatment.summaryList');
         Route::get('/medicalStaff/treatment/list/{healthRecordID}',[MedicalStaffTreatmentListController::class,'index'])->name('medicalStaff.treatment.List');
+        Route::get('/medicalStaff/treatment/view/{healthRecordID}/{treatmentID}',[MedicalStaffTreatmentViewController::class,'index'])->name('medicalStaff.treatment.view');
         Route::get('/medicalStaff/treatment/list/{healthRecordID}/add',[MedicalStaffTreatmentAddController::class,'index'])->name('medicalStaff.treatment.add.index');
         Route::post('/medicalStaff/treatment/list/{healthRecordID}/add',[MedicalStaffTreatmentAddController::class,'add'])->name('medicalStaff.treatment.add.post');
         //medicalCare record
@@ -131,6 +138,7 @@ Route::middleware('user')->group(function () {
         Route::get('/medicalStaff/medicalCare/catList/{sanctuaryID}',[MedicalStaffMedicalCareCatListController::class,'index'])->name('medicalStaff.medicalCare.catList');
         Route::get('medicalStaff/medicalCare/summaryList/{catID}',[MedicalStaffMedicalCareSummaryListController::class,'index'])->name('medicalStaff.medicalCare.summaryList');
         Route::get('/medicalStaff/medicalCare/list/{healthRecordID}',[MedicalStaffMedicalCareListController::class,'index'])->name('medicalStaff.medicalCare.List');
+        Route::get('/medicalStaff/medicalCare/view/{healthRecordID}/{medicalCareID}',[MedicalStaffMedicalCareViewController::class,'index'])->name('medicalStaff.medicalCare.view');
         Route::get('/medicalStaff/medicalCare/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'index'])->name('medicalStaff.medicalCare.add.index');
         Route::post('/medicalStaff/medicalCare/list/{healthRecordID}/add',[MedicalStaffMedicalCareAddController::class,'add'])->name('medicalStaff.medicalCare.add.post');
         //appointment
@@ -153,6 +161,8 @@ Route::middleware('user')->group(function () {
         Route::get('/caretaker/catActivity/sanctuaryList',[CaretakerCatActivitySanctuaryListController::class,'index'])->name('caretaker.catActivity.sanctuaryList');
         Route::get('/caretaker/catActivity/catList/{sanctuaryID}',[CaretakerCatActivityCatListController::class,'index'])->name('caretaker.catActivity.catList');
         Route::get('/caretaker/catActivity/summaryList/{catID}',[CaretakerCatActivitySummaryListController::class,'index'])->name('caretaker.catActivity.summaryList');
+        Route::get('/caretaker/catActivity/view/{catID}/{catActivityID}',[CaretakerCatActivityViewController::class,'index'])->name('caretaker.catActivity.view');
+
         Route::get('/caretaker/catActivity/add/{catID}',[CaretakerCatActivityAddController::class,'index'])->name('caretaker.catActivity.add.index');
         Route::post('/caretaker/catActivity/add/{catID}',[CaretakerCatActivityAddController::class,'add'])->name('caretaker.catActivity.add.post');
         //sanctuary task
@@ -216,6 +226,8 @@ Route::middleware('user')->group(function () {
         Route::get('/manager/catActivity/sanctuaryList',[ManagerCatActivitySanctuaryListController::class,'index'])->name('manager.catActivity.sanctuaryList');
         Route::get('/manager/catActivity/catList/{sanctuaryID}',[ManagerCatActivityCatListController::class,'index'])->name('manager.catActivity.catList');
         Route::get('/manager/catActivity/summaryList/{catID}',[ManagerCatActivitySummaryListController::class,'index'])->name('manager.catActivity.summaryList');
+        Route::get('/manager/catActivity/view/{catID}/{catActivityID}',[ManagerCatActivityViewController::class,'index'])->name('manager.catActivity.view');
+
 
 
         // supplies request

@@ -43,7 +43,7 @@
                                 {{$catHealthRecord->summary}}
                             </td>
                             <td>
-                                <a href="link1.html">
+                                <a href="{{route("medicalStaff.healthRecord.view",["summaryID"=>$catHealthRecord,'catID'=>$catID])}}">
                                     View
                                 </a>
                             </td>

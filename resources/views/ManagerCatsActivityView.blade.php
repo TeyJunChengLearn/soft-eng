@@ -1,4 +1,4 @@
-@extends('layouts.CaretakerTemplate')
+@extends('layouts.ManagerTemplate')
 
 @section('title',"Cats' Activity")
 
@@ -9,28 +9,28 @@
     </p>
 </div>
 <div class="user-main-content">
-    <form class="user-main-content-standardform-form" action="{{route('caretaker.catActivity.add.post',['catID'=>$catID])}}" method="POST">
+    <div class="user-main-content-standardform-form" action="{{route('caretaker.catActivity.add.post',['catID'=>$catID])}}" method="POST">
         @csrf
         <div class="user-main-content-Longform-form-input-container">
             <div class="usermain-content-standardform-form-input-container">
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->name}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->name}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->birthdate}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->birthdate}}" readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->breed}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->breed}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder=@if($cat->gender==false)
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder=@if($catActivity->cat->gender==false)
                         "Female"
                         @else
                         "Male"
@@ -40,17 +40,19 @@
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">Summary</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="summary" required></textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="summary" readonly required>{{$catActivity->summary}}</textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <button type="submit" class="user-main-content-standardform-button">
-                Confirm
-                </button>
+                <a href="{{route("manager.catActivity.summaryList",['catID'=>$catActivity->cat->id])}}">
+                    <button  class="user-main-content-standardform-button">
+                    Back
+                    </button>
+                </a>
             </div>
         </div>
-    </form>
+    </div>
 </div>
 <script>
     const textarea = document.getElementById('autoResizeTextarea');

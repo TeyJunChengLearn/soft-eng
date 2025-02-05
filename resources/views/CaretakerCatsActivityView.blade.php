@@ -16,21 +16,21 @@
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->name}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->name}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->birthdate}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->birthdate}}" readonly>
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->breed}}" readonly>
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$catActivity->cat->breed}}" readonly>
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder=@if($cat->gender==false)
+                        <input type="text" class="user-main-content-standardform-form-input" placeholder=@if($catActivity->cat->gender==false)
                         "Female"
                         @else
                         "Male"
@@ -40,13 +40,13 @@
             </div>
             <div class="user-main-content-Longform-form-textarea-container">
                 <label class="user-main-content-standardform-form-label">Summary</label>
-                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="summary" required></textarea>
+                <textarea id="autoResizeTextarea" rows="5" style="min-height: calc(1.5em * 5 + 8px);" name="summary" readonly required>{{$catActivity->summary}}</textarea>
             </div>
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <button type="submit" class="user-main-content-standardform-button">
-                Confirm
+                <button href="{{route("caretaker.catActivity.summaryList",['catID'=>$catID])}}" class="user-main-content-standardform-button">
+                Back
                 </button>
             </div>
         </div>

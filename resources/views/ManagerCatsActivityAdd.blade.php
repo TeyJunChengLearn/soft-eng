@@ -16,21 +16,21 @@
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Name</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" >
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" >
                     </div>
                 </div>
                 <div class="user-main-content-standardform-form-row">
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Breed</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" >
                     </div>
                     <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Gender</label>
-                        <input type="text" class="user-main-content-standardform-form-input" placeholder="Input 1">
+                        <input type="text" class="user-main-content-standardform-form-input" >
                     </div>
                 </div>
             </div>
