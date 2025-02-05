@@ -22,7 +22,7 @@
                     @if($catActivities->isEmpty())
                         <p>No activities found.</p>
                         @else
-                        <table class="user-main-content-6rowtable summary-table">
+                        <table class="user-main-content-6rowtable">
                             <tr class="user-main-content-6rowtable-tablehead">
                                 <th>
                                     Recorded Date
@@ -44,7 +44,7 @@
                                     </td>
                                     <td>
                                         <a href="link1.html">
-                                            view
+                                            View
                                         </a>
                                     </td>
                                 </tr>

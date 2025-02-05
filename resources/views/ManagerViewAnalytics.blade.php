@@ -8,9 +8,10 @@
         View Analytics
     </p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
 </div>
-<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<div class="user-main-content">
+<canvas id="myChart" style="width:70%;text-align:center;"></canvas>
+</div>
 <script>
     const dates = @json($dates);
     const dataset = @json($datasets);
