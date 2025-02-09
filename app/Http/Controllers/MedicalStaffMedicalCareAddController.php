@@ -14,7 +14,7 @@ class MedicalStaffMedicalCareAddController extends Controller
 {
     public function index(Request $request,$healthRecordID){
         $user = Auth::user();
-        $page="catTreatment";
+        $page="catMedicalCare";
         // $medicalStaffVerification=MedicalStaffVerification::where('medical_staff_id','=',$user->medicalStaff->id);
         $verifiedManagers = MedicalStaffVerification::where('medical_staff_id', "=",$user->medicalStaff->id)
         ->where('approval', true)

@@ -49,9 +49,6 @@
                             {{$appointment->datetime}}
                         </td>
                         <td>
-                            <a href="#">
-                                <i class="bi bi-eye fs-5"></i>
-                            </a>
                             <a href="{{route('medicalStaff.appointment.remove',['appointmentID'=>$appointment->id])}}">
                                 <i class="bi bi-trash3 fs-5"></i>
                             </a>

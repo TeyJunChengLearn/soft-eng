@@ -12,7 +12,7 @@ use App\Models\MedicalStaffVerification;
 class MedicalStaffHealthRecordAddController extends Controller
 {
     public function index(request $request,$catID){
-        $page= "catHealthRecords";
+        $page= "catHealthRecord";
         $user= Auth::user();
         $verifiedManagers = MedicalStaffVerification::where('medical_staff_id', $user->medicalStaff->id)
         ->where('approval', true)

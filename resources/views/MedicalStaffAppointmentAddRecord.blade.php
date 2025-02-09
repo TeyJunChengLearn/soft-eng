@@ -18,7 +18,7 @@
                         <label class="user-main-content-standardform-form-label">Name</label>
                         <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->name}}">
                     </div>
-                    <div class="user-main-content-standardformpluck('id');column">
+                    <div class="user-main-content-standardform-form-column">
                         <label class="user-main-content-standardform-form-label">Birthdate</label>
                         <input type="text" class="user-main-content-standardform-form-input" placeholder="{{$cat->birthdate}}">
                     </div>

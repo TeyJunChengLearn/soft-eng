@@ -28,7 +28,7 @@
                     </a>
                     <a href="{{route('admin.viewFeedback')}}">
                         <div class="user-sidebar-list-item-{{ ($page=='feedbackView') ? 'selected' : 'notselected' }}">
-                            Feedback
+                            View Feedback
                         </div>
                     </a>
                     <a href="{{route("admin.activityHistory.list")}}">

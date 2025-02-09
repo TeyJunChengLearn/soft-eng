@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -23,7 +24,7 @@ class LoginController extends Controller
 
         if($user && Hash::check($request->password, $user->password)){
             Auth::login($user);
-
+            Log::debug("loginController.handle");
             if($user->manager->status==false && $user->medicalStaff->status==false && $user->admin->status==false&&$user->caretaker->status==false){
                 return redirect()->route("selectRole.index");
             }else if($user->medicalStaff->status==true){

@@ -12,9 +12,10 @@ class AdminManageUserListController extends Controller
 
         if ($request->has('search') && !empty($request->search)) {
             $searchTerm = $request->search;
-            $query->where('name', 'LIKE', "%{$searchTerm}%")
-                  ->orWhere('email', 'LIKE', "%{$searchTerm}%")
-                  ->orWhere('role', 'LIKE', "%{$searchTerm}%");
+            $query->where(function ($subQuery) use ($searchTerm) {
+                $subQuery->where('username', 'like', "%{$searchTerm}%")
+                         ->orWhere('email', 'like', "%{$searchTerm}%");
+            });
         }
 
         $users = $query->paginate(20);

@@ -20,11 +20,10 @@ class ManagerSupplyRequestController extends Controller
         // Check if a search query exists
         if ($request->filled('search')) {
             $search = $request->input('search');
-
             // Apply the search filter
             $query->where(function ($subQuery) use ($search) {
-                $subQuery->where('title', 'like', "%{$search}%")
-                         ->orWhere('description', 'like', "%{$search}%");
+                $subQuery->where('item_name', 'like', "%{$search}%")
+                         ->orWhere('quantity', 'like', "%{$search}%");
             });
         }
 

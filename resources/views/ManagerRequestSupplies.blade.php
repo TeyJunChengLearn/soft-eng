@@ -11,7 +11,7 @@
             <div class="user-main-content">
                 <div class="user-main-content-searchbar-container-for-21rowtable">
                     <form class="user-main-content-searchbar-form">
-                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input">
+                            <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name='search'>
                     </form>
                 </div>
                 <!-- with create searchbar container -->

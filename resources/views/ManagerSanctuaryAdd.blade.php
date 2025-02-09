@@ -27,7 +27,7 @@
         </div>
         <div class="user-main-content-standardform-form-button-container-row">
             <div class="user-main-content-standardform-form-button-container-column">
-                <a href="#" class="user-main-content-standardform-button">
+                <a href="{{route("manager.manageSanctuary.list")}}" class="user-main-content-standardform-button">
                 Back
                 </a>
             </div>

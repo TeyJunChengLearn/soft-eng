@@ -14,6 +14,7 @@
                             <input type="text" placeholder="Search" class="user-main-content-searchbar-input" name='search'>
                     </form>
                 </div>
+
                 <!-- with create searchbar container -->
                 <div class="user-main-content-create-button-container mt-2"> <!-- Add margin for spacing -->
                     <a href="{{route('caretaker.sanctuaryTask.add.index',['sanctuaryID'=>$sanctuaryID])}}" class="btn btn-dark">Create</a>
